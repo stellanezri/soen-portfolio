@@ -13,10 +13,26 @@ import { contact } from '@/lib/content'
 export function ContactForm() {
   const [sent, setSent] = useState(false)
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  e.preventDefault()
+
+  const form = e.currentTarget
+
+  const response = await fetch("https://formspree.io/f/xrenpkdq", {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      Accept: "application/json",
+    },
+  })
+
+  if (response.ok) {
     setSent(true)
+    form.reset()
+  } else {
+    alert("Une erreur est survenue. Veuillez réessayer.")
   }
+}
 
   if (sent) {
     return (
@@ -63,6 +79,11 @@ export function ContactForm() {
           placeholder="Parlez-moi de votre poste, de vos besoins ou de votre projet…"
           className="rounded-lg border border-border bg-linen px-4 py-3 text-espresso outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-camel focus:ring-2 focus:ring-camel/30"
         />
+        <input
+  type="hidden"
+  name="_subject"
+  value="Nouveau message depuis le portfolio"
+/>
       </div>
       <button
         type="submit"
