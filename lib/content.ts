@@ -39,8 +39,9 @@ export const nav = [
   { label: 'Réalisations', href: '/realisations' },
   { label: 'Étude de cas', href: '/etude-de-cas' },
   { label: 'Projets personnels', href: '/projets-personnels' },
-  { label: "Contact", href: "/contact" },
 ] as const
+export const headerNav = nav.filter((item) => item.label !== 'Contact')
+
 
 /* --- Coordonnées & liens --- */
 export const contact = {

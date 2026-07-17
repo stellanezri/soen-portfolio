@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { nav, site } from '@/lib/content'
+import { nav, site, headerNav } from '@/lib/content'
 import { Monogram } from '@/components/monogram'
 import { cn } from '@/lib/utils'
 
@@ -53,7 +53,7 @@ export function SiteHeader() {
 
         {/* Navigation bureau */}
         <nav className="hidden items-center gap-6 lg:flex whitespace-nowrap" aria-label="Navigation principale">
-          {nav.map((item) => {
+          {headerNav.map((item) => {
             const active = pathname === item.href
             return (
               <Link

@@ -25,7 +25,7 @@ export function SiteFooter() {
               href="/contact"
               className="mt-7 inline-block rounded-full bg-ivoire px-6 py-3 text-sm text-espresso transition-colors hover:bg-khaki"
             >
-              Discutons de votre alternance
+              Discutons-en !
             </Link>
           </div>
 
