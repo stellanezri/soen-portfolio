@@ -93,7 +93,7 @@ export const about = {
     { label: 'Localisation', value: 'Nice — mobilité internationale' },
     { label: 'Disponibilité', value: 'Août 2026' },
   ],
-  portrait: '/images/portrait-stella-à-propos.jpg',
+  portrait: '/images/portrait-stella-a-propos.jpg',
 } as const
 
 /* --- COMPÉTENCES  --- */
