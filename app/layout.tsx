@@ -21,7 +21,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.role}`,
+    default: `${site.name} - Portfolio`,
     template: `%s — ${site.name}`,
   },
   description: site.metaDescription,
