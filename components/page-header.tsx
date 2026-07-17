@@ -16,9 +16,9 @@ export function PageHeader({
   return (
     <header className="relative overflow-hidden border-b border-border bg-linen">
       <Monogram
-        showRing={false}
-        className="pointer-events-none absolute -right-6 top-1/2 size-50 -translate-y-1/2 text-cocoa/[0.05] select-none md:size-80"
-      />
+  showRing={false}
+  className="pointer-events-none absolute -right-6 top-1/2 size-50 -translate-y-1/2 text-cocoa/[0.05] opacity-[0.10] select-none md:size-80"
+/>
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
         <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-camel">
           <span className="font-serif text-base tracking-normal">N° {index}</span>
