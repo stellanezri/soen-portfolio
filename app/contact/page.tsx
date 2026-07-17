@@ -83,7 +83,7 @@ export default function ContactPage() {
 
             <a
               href="/CV-Stella-Nezri-FR-US.pdf"
-              download="CV Stella Nezri FR-US.pdf"
+              download="CV-Stella-Nezri-FR-US.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex w-fit items-center gap-2 rounded-full border border-espresso/25 px-6 py-3 text-sm text-espresso transition-colors hover:bg-espresso hover:text-ivoire"
