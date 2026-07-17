@@ -45,11 +45,11 @@ export function Monogram({
         </svg>
       )}
       <Image
-        src="/s-logo-soen.svg"
-        alt=""
-        fill
-        className="object-contain p-[15%]"
-      />
+  src="/s-logo-soen.svg"
+  alt=""
+  fill
+  className="object-contain p-[15%] opacity-[0.10]"
+/>
     </span>
   )
 }
