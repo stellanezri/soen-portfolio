@@ -21,6 +21,7 @@ export function CtaBand({
   height={175}
   className="pointer-events-none absolute -center-16 -top-2 opacity-100 select-none"
 />
+      <div className="relative z-10">
         <h2 className="mx-auto max-w-2xl text-balance font-serif text-3xl leading-tight tracking-tight text-ivoire md:text-5xl">
           {title}
         </h2>
@@ -42,6 +43,7 @@ export function CtaBand({
             Voir mes réalisations
           </Link>
         </div>
+      </div> 
       </Reveal>
     </section>
   )
