@@ -9,9 +9,9 @@ export function SiteFooter() {
       {/* Monogramme en filigrane — fil rouge de la maison */}
       <Monogram
         showRing={false}
-        className="pointer-events-none absolute -right-8 -top-16 size-72 text-ivoire/[0.04] select-none"
+        className="pointer-events-none absolute -right-8 -top-16 size-65 text-ivoire/[0.04] select-none"
       />
-      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div className="max-w-sm">
             <div className="flex items-center gap-3">
