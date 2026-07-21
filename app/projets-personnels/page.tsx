@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import { Suspense } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { PageHeader } from '@/components/page-header'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
+import { PersonalCatalogue } from '@/components/projets-personnels/catalogue'
 import { personal } from '@/lib/content'
 
 export const metadata: Metadata = {
@@ -11,7 +12,13 @@ export const metadata: Metadata = {
   description: personal.intro,
 }
 
-export default function PersonalPage() {
+export default async function PersonalPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ projet?: string }>
+}) {
+  const { projet } = await searchParams
+
   return (
     <>
       <PageHeader
@@ -23,32 +30,9 @@ export default function PersonalPage() {
 
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-6 sm:grid-cols-2">
-            {personal.items.map((item, i) => (
-              <Reveal key={item.title} delay={(i % 2) * 90}>
-                <article className="group overflow-hidden rounded-2xl border border-border bg-ivoire">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={item.image || '/placeholder.svg'}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
-                    <span className="absolute left-4 top-4 rounded-full bg-linen/90 px-3 py-1 text-xs uppercase tracking-[0.15em] text-cocoa backdrop-blur">
-                      {item.type}
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h2 className="font-serif text-2xl leading-snug text-espresso">{item.title}</h2>
-                    <p className="mt-2 text-pretty leading-relaxed text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <Suspense fallback={null}>
+            <PersonalCatalogue initialSlug={projet} />
+          </Suspense>
 
           {/* Bandeau Instagram */}
           <Reveal className="mt-6">

@@ -204,7 +204,7 @@ export default function HomePage() {
             {featuredPersonal.map((project: any, i) => (
               <Reveal key={project.title} delay={i * 90}>
                 <Link
-                  href={`/projets-personnels?projet=${project.title}`}
+                  href={`/projets-personnels?projet=${project.slug}`}
                   className="group block overflow-hidden rounded-2xl border border-border bg-linen transition-colors hover:border-espresso/40"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">

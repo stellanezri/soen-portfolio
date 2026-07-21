@@ -320,49 +320,84 @@ export const caseStudy = {
   gallery: ['/images/enseigne-ludi-hall.png','/images/ludi-showroom-barrière.jpg','/images/kakemono-ludi.jpg','/images/ludi-showroom-1.jpg', '/images/ludi-showroom-roulette.jpg', '/images/ludi-showroom-alfastreet.jpg', '/images/Totebag-Black.png', '/images/Polo.png', '/images/Porte-carte.png'],
 } as const
 
-/* --- PROJETS PERSONNELS (création visuelle) --- */
+/* --- PROJETS PERSONNELS (création visuelle) ---
+ * Chaque projet a un slug (utilisé pour l'ouverture directe de la fiche via
+ * ?projet=slug), un type (catégorie de filtre), et une galerie pouvant
+ * contenir plusieurs images et/ou vidéos. Pour ajouter des médias à un
+ * projet existant, ajoute simplement des entrées dans son tableau `gallery` :
+ *   { type: 'image', src: '/images/mon-visuel-2.jpg' }
+ *   { type: 'video', src: '/videos/mon-clip.mp4' }
+ */
+export type PersonalMedia = { type: 'image' | 'video'; src: string }
+
+export type PersonalProject = {
+  slug: string
+  title: string
+  type: string
+  image: string
+  description: string
+  details?: string[]
+  gallery: PersonalMedia[]
+}
+
 export const personal = {
   intro:
     'Design, photo, vidéo, direction artistique : mes projets personnels sont le terrain où je teste, j’affine et je construis mon regard.',
   instagram: { handle: '@stella.nzr', href: 'https://www.instagram.com/stella.nzr/' },
   items: [
     {
+      slug: 'focus-shooting-photo',
       title: 'FOCUS — Shooting photo',
       type: 'Photographie & Direction artistique',
-      image: '/images/focus-design.jpeg', 
+      image: '/images/focus-design.jpeg',
       description: 'Modèle photo pour ce shooting et à l’origine de la direction artistique finale, entre regard et typographie serif superposée.',
+      details: [
+        'Direction artistique complète du shooting : choix du regard, de la lumière et de la mise en page.',
+        'Superposition d’une typographie serif pour ancrer l’image dans un univers éditorial plutôt que purement photographique.',
+      ],
+      gallery: [{ type: 'image', src: '/images/focus-design.jpeg' }],
     },
     {
+      slug: 'feed-instagram-identite',
       title: 'Feed Instagram — Identité',
       type: 'Réseaux sociaux',
       image: '/images/feed-ig-atelier-meaunn.jpeg',
       description: 'Qui a dit qu’un compte Instagram lifestyle ne pouvait pas contenir une structure visuelle cohérente et rythmée à l’image du créateur?',
+      gallery: [{ type: 'image', src: '/images/feed-ig-atelier-meaunn.jpeg' }],
     },
     {
+      slug: 'publicite-photobooth-tiktok',
       title: 'Publicité Photobooth — TikTok',
       type: 'Vidéo',
       image: '/images/photobooth.png',
       description: 'Montage et formats courts pour la campagne publicitaire fictive d’un street photobooth, pensés pour l’algorithme et l’engagement TikTok.',
+      gallery: [{ type: 'image', src: '/images/photobooth.png' }],
     },
     {
+      slug: 'identite-visuelle-soen',
       title: 'Identité visuelle — SOEN',
       type: 'Branding',
       image: '/images/crea-soen-2026.png',
       description: 'Construction de mon identité de marque personnelle : logo, palette, typographie et univers verbal autour de mon nom.',
+      gallery: [{ type: 'image', src: '/images/crea-soen-2026.png' }],
     },
     {
+      slug: 'proposition-crm-hubspot',
       title: 'Proposition de CRM — HubSpot',
       type: 'Stratégie',
       image: '/images/proposition-crm-ludi.png',
       description: 'Conception et présentation d’un plan de déploiement de CRM en 3 phases pour Ludi SFM afin de suivre ses 204 casinos clients.',
+      gallery: [{ type: 'image', src: '/images/proposition-crm-ludi.png' }],
     },
     {
+      slug: 'portfolio-soen',
       title: 'Portfolio — SOEN',
       type: 'Développement web',
       image: '/plain-logo-soen.svg',
       description: 'Et si je vous disais que vous êtes en train de le parcourir ? Ce portfolio a été conçu par mes soins, avec Next.js et VS Code via Claude, pour présenter mon travail et mes compétences.',
+      gallery: [{ type: 'image', src: '/plain-logo-soen.svg' }],
     },
-  ],
+  ] satisfies PersonalProject[],
 } as const
 
 /* --- CONTACT --- */
