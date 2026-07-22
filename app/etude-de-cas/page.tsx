@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function CaseStudyPage() {
   return (
     <>
-      <PageHeader index="04" eyebrow={caseStudy.eyebrow} title={caseStudy.title} intro={caseStudy.subtitle} />
+      <PageHeader index="04" eyebrow={caseStudy.eyebrow} title={caseStudy.title} intro={caseStudy.subtitle as unknown as readonly string[]} />
 
       {/* Visuel principal */}
       <section className="px-5 pt-12 md:px-8 md:pt-16">
@@ -98,11 +98,11 @@ export default function CaseStudyPage() {
       {/* Galerie */}
       <section className="px-5 pb-8 md:px-8">
         <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-3">
-          {caseStudy.gallery.map((src, i) => (
-            <Reveal key={src} delay={i * 80}>
+          {caseStudy.gallery.map((item, i) => (
+            <Reveal key={item.src} delay={i * 80}>
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-border bg-ivoire">
                 <Image
-                  src={src || '/placeholder.svg'}
+                  src={item.src || '/placeholder.svg'}
                   alt={`${caseStudy.title} — visuel ${i + 1}`}
                   fill
                   className="object-cover"

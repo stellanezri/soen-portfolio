@@ -9,7 +9,7 @@ export function PageHeader({
   index: string
   eyebrow: string
   title: string
-  intro?: string | string[]
+  intro?: string | readonly string[]
 }) {
   const introLines = typeof intro === 'string' ? [intro] : intro
 

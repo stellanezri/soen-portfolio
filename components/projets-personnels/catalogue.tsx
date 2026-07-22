@@ -121,8 +121,8 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
         onClick={onClose}
         className="absolute inset-0 bg-espresso/40 backdrop-blur-sm animate-in fade-in"
       />
-      <div className="relative flex h-full w-full max-w-[min(96vw,1100px)] flex-col overflow-y-auto bg-linen shadow-2xl animate-in slide-in-from-right duration-300">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-linen/90 px-6 py-4 backdrop-blur md:px-8">
+      <div className="relative flex h-full w-full max-w-[min(96vw,880px)] flex-col overflow-y-auto bg-ivoire shadow-2xl animate-in slide-in-from-right duration-300">
+        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-ivoire/90 px-6 py-4 backdrop-blur md:px-8">
           <span className="font-serif text-lg text-cocoa">{project.type}</span>
           <button
             type="button"
@@ -134,14 +134,17 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
           </button>
         </div>
 
-        <div className="relative aspect-[16/10] w-full shrink-0">
+        <div className="relative aspect-[16/10] w-full shrink-0 bg-ivoire">
           {gallery[0].type === 'video' ? (
             <video
-              src={gallery[0].src}
               controls
               playsInline
-              className="h-full w-full object-cover"
-            />
+              preload="metadata"
+              poster={gallery[0].poster}
+              className="h-full w-full object-contain"
+            >
+              <source src={gallery[0].src} type="video/mp4" />
+            </video>
           ) : (
             <Image
               src={gallery[0].src || '/placeholder.svg'}
@@ -186,11 +189,14 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
                   media.type === 'video' ? (
                     <video
                       key={media.src + i}
-                      src={media.src}
                       controls
                       playsInline
-                      className="aspect-[4/3] w-full rounded-xl border border-border object-cover"
-                    />
+                      preload="metadata"
+                      poster={media.poster}
+                      className="aspect-[4/3] w-full rounded-xl border border-border object-contain bg-ivoire"
+                    >
+                      <source src={media.src} type="video/mp4" />
+                    </video>
                   ) : (
                     <div
                       key={media.src + i}
