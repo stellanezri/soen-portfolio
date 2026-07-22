@@ -155,6 +155,8 @@ export type Project = {
   approach: string[]
   results: { value: string; label: string }[]
   tags: string[]
+  gallery: Array<{ src: string; alt?: string; type?: 'image' | 'video' }>
+
 }
 
 export const projects: Project[] = [
@@ -181,6 +183,12 @@ export const projects: Project[] = [
       { value: 'Régulier', label: 'Rythme de publication selon les installations' },
     ],
     tags: ['LinkedIn', 'Community management', 'Création de contenu'],
+    gallery: [
+      { src: '/images/post-recrut-linkedin.png', alt: 'Post NOUS RECRUTONS Sales Executive' },
+      { src: '/images/post-money-gong.jpg', alt: 'Post Money Gong' },
+      { src: '/images/post-v-line-alfastreet.jpg', alt: 'Post V-line' },
+      { src: '/images/post-prism-element.png', alt: 'Post Prism Element' },
+    ]
   },
   {
     slug: 'creation-visuelle',
@@ -205,6 +213,10 @@ export const projects: Project[] = [
       { value: 'FR / EN', label: 'déclinaisons de supports' },
     ],
     tags: ['Design', 'Direction artistique', 'Outils de création'],
+    gallery: [
+      { src: '/images/recrut-linkedin-ludi.png', alt: 'Post recrutement LinkedIn' },
+      { src: '/images/feed-ig-atelier-meaunn.jpg', alt: 'Feed Instagram' },
+    ]
   },
   {
     slug: 'retail-zara',
@@ -229,6 +241,10 @@ export const projects: Project[] = [
       { value: 'Flexibilité', label: 'sur les temps forts' },
     ],
     tags: ['Vente directe', 'Relation client', 'Gestion de la pression'],
+    gallery: [
+      { src: '/images/recrut-linkedin-ludi.png', alt: 'Post recrutement LinkedIn' },
+      { src: '/images/feed-ig-atelier-meaunn.jpg', alt: 'Feed Instagram' },
+    ]
   },
   {
     slug: 'kit-instagram',
@@ -253,6 +269,10 @@ export const projects: Project[] = [
       { value: '12 jours', label: 'planning de campagne Ads' },
     ],
     tags: ['Instagram', 'Stratégie de contenu', 'Brand Identity', 'Media Planning'],
+    gallery: [
+      { src: '/images/recrut-linkedin-ludi.png', alt: 'Post recrutement LinkedIn' },
+      { src: '/images/feed-ig-atelier-meaunn.jpg', alt: 'Feed Instagram' },
+    ]
   },
   {
     slug: 'supports-bilingues',
@@ -277,6 +297,10 @@ export const projects: Project[] = [
       { value: 'B2B', label: 'clientèle internationale' },
     ],
     tags: ['Bilingue', 'Traduction', 'Supports commerciaux', 'Identité de marque'],
+    gallery: [
+      { src: '/images/recrut-linkedin-ludi.png', alt: 'Post recrutement LinkedIn' },
+      { src: '/images/feed-ig-atelier-meaunn.jpg', alt: 'Feed Instagram' },
+    ]
   },
 ]
 
@@ -317,7 +341,17 @@ export const caseStudy = {
     { value: '9', label: 'goodies déclinés' },
     { value: 'Identité visuelle', label: 'unifiée' },
   ],
-  gallery: ['/images/enseigne-ludi-hall.png','/images/ludi-showroom-barrière.jpg','/images/kakemono-ludi.jpg','/images/ludi-showroom-1.jpg', '/images/ludi-showroom-roulette.jpg', '/images/ludi-showroom-alfastreet.jpg', '/images/Totebag-Black.png', '/images/Polo.png', '/images/Porte-carte.png'],
+gallery: [
+      { type: 'image', src: '/images/enseigne-ludi-hall.png' },
+      { type: 'image', src: '/images/ludi-showroom-barrière.jpg' },
+      { type: 'image', src: '/images/kakemono-ludi.jpg' },
+      { type: 'image', src: '/images/ludi-showroom-1.jpg' },
+      { type: 'image', src: '/images/ludi-showroom-roulette.jpg' },
+      { type: 'image', src: '/images/ludi-showroom-alfastreet.jpg' },
+      { type: 'image', src: '/images/Totebag-Black.png' },
+      { type: 'image', src: '/images/Polo.png' },
+      { type: 'image', src: '/images/Porte-carte.png' },
+    ],
 } as const
 
 /* --- PROJETS PERSONNELS (création visuelle) ---
@@ -349,13 +383,29 @@ export const personal = {
       slug: 'focus-shooting-photo',
       title: 'FOCUS — Shooting photo',
       type: 'Photographie & Direction artistique',
-      image: '/images/focus-design.jpeg',
+      image: '/images/focus-design-1.jpeg',
       description: 'Modèle photo pour ce shooting et à l’origine de la direction artistique finale, entre regard et typographie serif superposée.',
       details: [
         'Direction artistique complète du shooting : choix du regard, de la lumière et de la mise en page.',
         'Superposition d’une typographie serif pour ancrer l’image dans un univers éditorial plutôt que purement photographique.',
       ],
-      gallery: [{ type: 'image', src: '/images/focus-design.jpeg' }],
+      gallery: [
+      { type: 'image', src: '/images/focus-design-1.jpeg' },
+      { type: 'image', src: '/images/focus-design-2.jpeg' },   // ajoute tes autres photos ici
+      { type: 'image', src: '/images/focus-design-3.jpeg' },
+    // { type: 'video', src: '/videos/focus-video.mp4' }  // si tu veux une vidéo
+      ],   
+    },
+    {
+      slug: 'unboxing-tiktok',
+      title: 'Unboxing — Tiktok',
+      type: 'Vidéo',
+      video: '/videos/unboxing-micros.mp4',
+      image: '/images/cover-unboxing-micros.jpg',
+      description: 'Montage CapCut dynamique d’un unboxing, rythmé pour capter l’attention dès les premières secondes sur TikTok.',
+      gallery: [
+        { type: 'video', src: '/videos/unboxing-micros.mp4', poster: '/images/cover-unboxing-micros.jpg' },
+      ],
     },
     {
       slug: 'feed-instagram-identite',
@@ -363,15 +413,26 @@ export const personal = {
       type: 'Réseaux sociaux',
       image: '/images/feed-ig-atelier-meaunn.jpeg',
       description: 'Qui a dit qu’un compte Instagram lifestyle ne pouvait pas contenir une structure visuelle cohérente et rythmée à l’image du créateur?',
+      details: [
+        'Construction d’une grille de publication pensée pour se lire d’un seul coup d’œil : alternance de plans serrés sur la matière, de mises en scène du produit et de respirations plus lifestyle.',
+        'Harmonisation de la palette et de la lumière sur l’ensemble des visuels pour que le feed fonctionne comme une vitrine, pas comme une suite de posts isolés.',
+      ],
       gallery: [{ type: 'image', src: '/images/feed-ig-atelier-meaunn.jpeg' }],
     },
     {
       slug: 'publicite-photobooth-tiktok',
       title: 'Publicité Photobooth — TikTok',
       type: 'Vidéo',
-      image: '/images/photobooth.png',
+      video: '/videos/photobooth-tiktok.mp4',
+      image: '/images/cover-photobooth.jpg',
       description: 'Montage et formats courts pour la campagne publicitaire fictive d’un street photobooth, pensés pour l’algorithme et l’engagement TikTok.',
-      gallery: [{ type: 'image', src: '/images/photobooth.png' }],
+      details: [
+        'Écriture d’un scénario publicitaire fictif pensé pour un format court, avec une accroche dans les 3 premières secondes.',
+        'Montage rythmé, cuts courts et transitions calées sur le son, dans les codes natifs de TikTok plutôt qu’en simple adaptation d’un format vidéo classique.',
+      ],
+      gallery: [
+        { type: 'video', src: '/videos/photobooth-tiktok.mp4', poster: '/images/cover-photobooth.jpg' },
+      ],
     },
     {
       slug: 'identite-visuelle-soen',
@@ -379,6 +440,10 @@ export const personal = {
       type: 'Branding',
       image: '/images/crea-soen-2026.png',
       description: 'Construction de mon identité de marque personnelle : logo, palette, typographie et univers verbal autour de mon nom.',
+      details: [
+        'Construction d’un acronyme (Shine. Own. Earn. Navigate.) autour de mon nom pour porter une identité de marque personnelle plutôt qu’un simple portfolio.',
+        'Choix d’une palette de tons chauds et d’une esthétique proche du "old money" pour incarner une élégance sobre et durable, à l’opposé des codes saturés habituels.',
+      ],
       gallery: [{ type: 'image', src: '/images/crea-soen-2026.png' }],
     },
     {
@@ -387,6 +452,10 @@ export const personal = {
       type: 'Stratégie',
       image: '/images/proposition-crm-ludi.png',
       description: 'Conception et présentation d’un plan de déploiement de CRM en 3 phases pour Ludi SFM afin de suivre ses 204 casinos clients.',
+      details: [
+        'Structuration d’un plan de déploiement en 3 phases (cadrage & migration des données, prise en main commerciale, pilotage par le reporting) pour rendre le projet finançable et actionnable.',
+        'Réflexion pensée pour le contexte réel de Ludi SFM : un portefeuille de 204 casinos clients à suivre sans perte d’information entre les commerciaux.',
+      ],
       gallery: [{ type: 'image', src: '/images/proposition-crm-ludi.png' }],
     },
     {
@@ -394,7 +463,11 @@ export const personal = {
       title: 'Portfolio — SOEN',
       type: 'Développement web',
       image: '/plain-logo-soen.svg',
-      description: 'Et si je vous disais que vous êtes en train de le parcourir ? Ce portfolio a été conçu par mes soins, avec Next.js et VS Code via Claude, pour présenter mon travail et mes compétences.',
+      description: 'Et si je vous disais que vous êtes en train de le parcourir ? Ce portfolio a été conçu par mes soins pour présenter mon travail et mes compétences.',
+      details: [
+        'Développement du site en Next.js, TypeScript et Tailwind CSS, avec un contenu entièrement centralisé pour pouvoir tout modifier sans toucher au design.',
+        'Passage d’un premier prototype généré sur v0.app à une version locale, plus pérenne et éditable, déployée sur Netlify.',
+      ],
       gallery: [{ type: 'image', src: '/plain-logo-soen.svg' }],
     },
   ] satisfies PersonalProject[],

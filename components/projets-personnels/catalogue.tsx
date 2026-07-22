@@ -121,7 +121,7 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
         onClick={onClose}
         className="absolute inset-0 bg-espresso/40 backdrop-blur-sm animate-in fade-in"
       />
-      <div className="relative flex h-full w-full max-w-2xl flex-col overflow-y-auto bg-linen shadow-2xl animate-in slide-in-from-right duration-300">
+      <div className="relative flex h-full w-full max-w-[min(96vw,1100px)] flex-col overflow-y-auto bg-linen shadow-2xl animate-in slide-in-from-right duration-300">
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-border bg-linen/90 px-6 py-4 backdrop-blur md:px-8">
           <span className="font-serif text-lg text-cocoa">{project.type}</span>
           <button
