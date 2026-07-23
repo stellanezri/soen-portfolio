@@ -348,9 +348,10 @@ export const caseStudy = {
     },
   ],
   results: [
-    { value: '+28 %', label: 'des abonnés LinkedIn' },
-    { value: '9', label: 'goodies déclinés du kakémono aux polos' },
-    { value: '3e édition', label: 'du Ludi Show, identité visuelle pilotée de bout en bout' },
+    { value: 'Identité visuelle', label: 'du Ludi Show pilotée de bout en bout' },
+    { value: '4 volets', label: 'gérés en autonomie : direction artistique, goodies, sourcing, expérience sur place' },
+    { value: '2 formats', label: 'de supports visuels créés : kakemono d’accueil et déclinaison écrans' },
+    { value: '9', label: 'goodies déclinés, du kakemono aux polos' },
   ],
 gallery: [
       { type: 'image', src: '/images/enseigne-ludi-hall.png' },
