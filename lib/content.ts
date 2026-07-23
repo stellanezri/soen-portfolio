@@ -28,7 +28,7 @@ export const site = {
   degree: 'Bachelor in Management, spécialisation International Business',
   location: 'Nice, France',
   metaDescription:
-    'Portfolio de Stella Nezri, Assistante Marketing bilingue franco-américaine avec 2 ans d’expérience, en recherche d’une alternance de 12 mois orientée développement, export et commerce international pour son Bachelor in Management (International Business) à l’IPAG Business School Nice.',
+    'Portfolio de Stella Nezri, Assistante Marketing avec 2 ans d’expérience en contenu, communication et stratégie commerciale B2B, en recherche d’une alternance de 12 mois orientée développement, export et commerce international pour son Bachelor in Management spécialisation International Business à l’IPAG Business School à Nice.',
 } as const
 
 /* --- Navigation (ordre = ordre dans le menu) --- */
@@ -68,15 +68,15 @@ export const hero = {
   secondaryCta: { label: 'Voir mes réalisations', href: '/realisations' },
   facts: [
     { value: '2 ans', label: 'd’expérience en environnement B2B' },
-    { value: 'FR · EN', label: 'bilingue franco-américaine' },
-    { value: '3 langues', label: 'dont l’espagnol' },
+    { value: '+28 %', label: 'de croissance d’une communauté LinkedIn' },
+    { value: '3 langues', label: 'FR · EN · ESP' },
   ],
 } as const
 
 /* --- À PROPOS --- */
 export const about = {
   intro: [
-    'Je suis Stella, 21 ans, Assistante Marketing bilingue franco-américaine. J’aime apprendre, tester, comprendre et la création de contenu autant que la stratégie commerciale ne sont finalement que deux façons de nourrir la même curiosité.',
+    'Je suis Stella, 21 ans, Assistante Marketing bilingue franco-américaine. J’aime apprendre, tester, comprendre. La création de contenu autant que la stratégie commerciale ne sont, au fond, que deux façons de nourrir la même curiosité.',
     'Chaque expérience, qu’elle ait eu lieu derrière un écran ou sur le terrain, m’a appris quelque chose de différent. C’est ce parcours que je raconte ici.',
   ],
   paragraphs: [
@@ -85,7 +85,7 @@ export const about = {
     'J’ai grandi en région parisienne jusqu’à mes 17 ans, entre une mère américaine et un père marseillais : le français et l’anglais ont toujours été deux langues du quotidien, pas deux matières scolaires. Cette double culture m’a très tôt donné le goût de regarder les choses sous plusieurs angles, et une certaine allergie aux réponses toutes faites.',
     'Après le bac, j’ai posé mes valises à Nice en démarrant par une Licence en Langues Étrangères Appliquées Anglais-Espagnol, histoire de poser des bases solides avant de me spécialiser. J’ai vite compris que ce que je cherchais n’était pas seulement les langues en elles-mêmes, mais tout ce qu’elles permettent de faire une fois qu’on les met au service d’une stratégie. J’ai donc fini par bifurquer vers un Bachelor en Marketing Digital. C’est là que j’ai compris que ma curiosité pour le langage, l’image, la psychologie de la vente, pouvait devenir un vrai métier plutôt qu’une liste de centres d’intérêt.',
     'Avant d’évoluer dans le marketing, j’ai travaillé directement au contact des clients, notamment au Crowne Plaza Hotel à Nice puis chez ZARA à Cannes. Ces expériences B2C m’ont appris la relation client, la rigueur opérationnelle, la gestion de la pression et surtout l’importance de comprendre les besoins d’une personne avant de vouloir lui vendre une solution.',
-    'Ce qui me fait avancer, au fond, c’est tout ce qui nourrit mon âme : ce qui me pousse à me renseigner, à discuter, à sortir de ma zone de confort intellectuelle. En septembre 2026, j’intègre ma 3e année de Bachelor in Management, spécialisation International Business, à l’IPAG Business School, une formation entièrement dispensée en anglais et je recherche une alternance de 12 mois en développement, export ou commerce international, la suite logique d’un parcours construit sur l’envie d’apprendre, pas sur un plan tracé d’avance.',
+    'Ce qui me fait avancer, au fond, c’est tout ce qui nourrit mon âme : me renseigner, discuter, sortir de ma zone de confort intellectuelle. En septembre 2026, j’intègre ma 3e année de Bachelor in Management, spécialisation International Business, à l’IPAG Business School, une formation entièrement dispensée en anglais et je recherche une alternance de 12 mois en développement, export ou commerce international, la suite logique d’un parcours construit sur l’envie d’apprendre, pas sur un plan tracé d’avance.',
   ],
   facts: [
     { label: 'Formation', value: 'B1 & B2 Marketing Digital • B3 in Management spé International Business' },
@@ -209,8 +209,8 @@ export const projects: Project[] = [
     ],
     results: [
       { value: 'Multi-supports', label: 'posts, goodies, signatures' },
-      { value: 'Canva · Photoshop · Affinity', label: 'outils de création' },
-      { value: 'FR / EN', label: 'déclinaisons de supports' },
+      { value: '3 outils', label: 'maîtrisés : Canva, Photoshop, Affinity' },
+      { value: '2 langues', label: 'déclinaisons de supports FR/EN' },
     ],
     tags: ['Design', 'Direction artistique', 'Outils de création'],
     gallery: [
@@ -239,9 +239,9 @@ export const projects: Project[] = [
       'Suivi des tendances pour orienter les recommandations.',
     ],
     results: [
-      { value: '≃ 45k €', label: 'de ventes par jour' },
-      { value: 'Objectifs', label: 'régulièrement atteints' },
-      { value: 'Flexibilité', label: 'sur les temps forts' },
+      { value: '≃ 45k €', label: 'de ventes par jour en boutique' },
+      { value: '5 mois / 5', label: 'objectifs de vente mensuels atteints' },
+      { value: 'Flexibilité', label: 'sur la gestion du rayon pendant les temps forts' },
     ],
     tags: ['Vente directe', 'Relation client', 'Gestion de la pression'],
     gallery: [{ src: '/images/zara-retail-pic.jpg', alt: 'Retail Zara' },]
@@ -305,9 +305,9 @@ export const projects: Project[] = [
       'Harmonisation du ton et du vocabulaire entre les deux langues.',
     ],
     results: [
-      { value: 'FR / EN', label: 'supports bilingues' },
-      { value: '100 %', label: 'de cohérence de marque' },
-      { value: 'B2B', label: 'clientèle internationale' },
+      { value: '~15 fiches produits', label: 'traduites et mises en forme FR/EN' },
+      { value: '65+ règles de jeux', label: 'traduites' },
+      { value: '200+ casinos', label: 'touchés via ce réseau de distribution B2B' },
     ],
     tags: ['Bilingue', 'Traduction', 'Supports commerciaux', 'Identité de marque'],
     gallery: [
@@ -322,7 +322,6 @@ export const caseStudy = {
   eyebrow: 'Étude de cas',
   title: 'Ludi Show',
   subtitle: [
-    'Assistante Marketing en alternance chez Ludi SFM : de la création de contenu bilingue à l’événement.',
     'Ludi SFM est une entreprise niçoise spécialisée dans la fourniture et la maintenance de machines à sous et jeux pour les casinos français, avec un réseau de plus de 200 établissements. L’entreprise s’appuie également sur Modulus, sa société sœur basée à Monaco, qui élargit son rayonnement sur la Principauté ainsi qu’à l’international. C’est dans ce contexte B2B exigeant que s’est déroulé le Ludi Show, l’événement au cœur de cette étude de cas.',
   ],
   context:
@@ -349,10 +348,9 @@ export const caseStudy = {
     },
   ],
   results: [
-    { value: 'Hausse', label: 'des abonnés LinkedIn' },
-    { value: 'Branding', label: 'adapté objet par objet' },
-    { value: '9', label: 'goodies déclinés' },
-    { value: 'Identité visuelle', label: 'unifiée' },
+    { value: '+28 %', label: 'des abonnés LinkedIn' },
+    { value: '9', label: 'goodies déclinés du kakémono aux polos' },
+    { value: '3e édition', label: 'du Ludi Show, identité visuelle pilotée de bout en bout' },
   ],
 gallery: [
       { type: 'image', src: '/images/enseigne-ludi-hall.png' },
@@ -498,10 +496,10 @@ export const personal = {
 export const contactPage = {
   title: 'Travaillons ensemble.',
   intro:
-    'Vous cherchez une alternante marketing bilingue, créative, minutieuse et orientée résultats pour une mission de 12 mois orientée développement ou commerce international ? Parlons-en.',
+    'Vous cherchez une alternante créative, minutieuse et orientée résultats pour une mission de 12 mois orientée développement ou commerce international ? Parlons-en.',
   reasons: [
-    'Bilingue franco-américaine, à l’aise en environnement international.',
-    'Quatre ans d’expérience terrain de la relation client au marketing.',
+    'Expérience concrète de la relation client au marketing, sur le terrain comme derrière un écran.',
+    'À l’aise en environnement international et interculturel.',
     'Profil solaire, créatif et opérationnel : création de contenu, stratégie de vente et développement commercial.',
   ],
 } as const
