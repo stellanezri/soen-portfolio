@@ -145,7 +145,7 @@ export const hardSkills = {
 export type Project = {
   slug: string
   title: string
-  category: 'Contenu' | 'Digital' | 'Traduction' | 'Vente'
+  category: 'Contenu' | 'Digital' | 'Traduction' | 'Retail'
   year: string
   client: string
   role: string

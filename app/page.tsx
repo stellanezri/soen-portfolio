@@ -5,7 +5,7 @@ import { Hero } from '@/components/home/hero'
 import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
-import { projects, caseStudy, skills, about, personal } from '@/lib/content'
+import { projects, caseStudy, about, personal } from '@/lib/content'
 
 const journey = [
   { href: '/a-propos', label: 'À propos', desc: 'Qui je suis, d’où je viens, où je vais.' },
