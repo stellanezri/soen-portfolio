@@ -215,6 +215,7 @@ export const projects: Project[] = [
     tags: ['Design', 'Direction artistique', 'Outils de création'],
     gallery: [
       { src: '/images/goodies-ludi-beige.jpeg', alt: 'Goodies Ludi' },
+      { src: '/images/signature-mail-noel-ludi.png', alt: 'Signature Mail Noël Ludi' },
       { src: '/images/post-modulus.jpg', alt: 'Post Chinese NYE Modulus 2025' },
       { src: '/images/card-modulus.jpg', alt: 'E-card Chinese NYE Modulus 2025' },
       { src: '/images/post-moduloween.png', alt: 'Post Moduloween' },
@@ -223,7 +224,7 @@ export const projects: Project[] = [
   {
     slug: 'retail-zara',
     title: 'Performance vente en boutique',
-    category: 'Vente',
+    category: 'Retail',
     year: '2024',
     client: 'ZARA — Cannes',
     role: 'Vendeuse (CDD)',
@@ -310,7 +311,6 @@ export const projects: Project[] = [
     ],
     tags: ['Bilingue', 'Traduction', 'Supports commerciaux', 'Identité de marque'],
     gallery: [
-      { src: '/images/signature-mail-noel-ludi.png', alt: 'Signature Mail Noël Ludi' },
       { src: '/images/luck-rising-rgl.png', alt: 'Luck Rising RGL' },
       { src: '/images/luckyup-alfastreet.png', alt: 'Lucky Up Alfastreet' },
     ]
