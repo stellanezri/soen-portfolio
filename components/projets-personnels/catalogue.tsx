@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
-import Image from 'next/image'
+import { BaseImage as Image } from '@/components/base-image'
 import Link from 'next/link'
 import { ArrowUpRight, X } from 'lucide-react'
 import { personal, type PersonalProject } from '@/lib/content'
 import { Reveal } from '@/components/reveal'
 import { cn } from '@/lib/utils'
 import { useSearchParams } from 'next/navigation'
+import { BASE_PATH } from '@/lib/base-path'
 
 export function PersonalCatalogue() {
   const searchParams = useSearchParams()
@@ -138,25 +139,29 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
           </button>
         </div>
 
-        <div className="relative aspect-[16/10] w-full shrink-0 bg-ivoire">
+        <div className="mx-6 mt-6 md:mx-8">
           {gallery[0].type === 'video' ? (
-            <video
-              controls
-              playsInline
-              preload="metadata"
-              poster={gallery[0].poster}
-              className="h-full w-full object-contain"
-            >
-              <source src={gallery[0].src} type="video/mp4" />
-            </video>
+            <div className="mx-auto max-w-2xl overflow-hidden rounded-xl bg-black">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                poster={gallery[0].poster}
+                className="aspect-video w-full object-contain"
+              >
+                <source src={`${BASE_PATH}${gallery[0].src}`} type="video/mp4" />
+              </video>
+            </div>
           ) : (
-            <Image
-              src={gallery[0].src || '/placeholder.svg'}
-              alt={project.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 42rem"
-            />
+            <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-ivoire">
+              <Image
+                src={gallery[0].src || '/placeholder.svg'}
+                alt={project.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 42rem"
+              />
+            </div>
           )}
         </div>
 
@@ -191,16 +196,17 @@ function ProjectDetail({ project, onClose }: { project: PersonalProject; onClose
               <div className="mt-4 grid grid-cols-2 gap-3">
                 {gallery.slice(1).map((media, i) =>
                   media.type === 'video' ? (
-                    <video
-                      key={media.src + i}
-                      controls
-                      playsInline
-                      preload="metadata"
-                      poster={media.poster}
-                      className="aspect-[4/3] w-full rounded-xl border border-border object-contain bg-ivoire"
-                    >
-                      <source src={media.src} type="video/mp4" />
-                    </video>
+                    <div key={media.src + i} className="overflow-hidden rounded-xl bg-black">
+                      <video
+                        controls
+                        playsInline
+                        preload="metadata"
+                        poster={media.poster}
+                        className="aspect-video w-full object-contain"
+                      >
+                        <source src={`${BASE_PATH}${media.src}`} type="video/mp4" />
+                      </video>
+                    </div>
                   ) : (
                     <div
                       key={media.src + i}

@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
+const basePath = '/soen-portfolio'
+
 const nextConfig = {
   output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: process.env.NODE_ENV === 'production' ? '/soen-portfolio' : '',
-  turbopack: {
-    root: import.meta.dirname,
-  },
+  images: { unoptimized: true },
+  basePath,
+  assetPrefix: `${basePath}/`,
 }
 
 export default nextConfig

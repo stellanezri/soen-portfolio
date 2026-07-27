@@ -4,6 +4,7 @@ import { Fraunces, Inter } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { site } from '@/lib/content'
+import { BASE_PATH } from '@/lib/base-path'
 import './globals.css'
 
 const fraunces = Fraunces({
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     description: site.metaDescription,
     images: [
       {
-        url: '/og-image.png', // 1200x630, à créer (voir note plus bas)
+        url: `${BASE_PATH}/og-image.png`,
         width: 1200,
         height: 630,
         alt: `${site.name} - Portfolio`,
@@ -51,12 +52,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${site.name} - Portfolio`,
     description: site.metaDescription,
-    images: ['/og-image.png'],
+    images: [`${BASE_PATH}/og-image.png`],
   },
   icons: {
-    icon: '/icon.png',
-    shortcut: '/icon.png',
-    apple: '/apple-icon.png',
+    icon: `${BASE_PATH}/icon.png`,
+    shortcut: `${BASE_PATH}/icon.png`,
+    apple: `${BASE_PATH}/apple-icon.png`,
   },
 }
 

@@ -2,13 +2,14 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Monogram } from '@/components/monogram'
 import { hero, site } from '@/lib/content'
+import { BASE_PATH } from '@/lib/base-path'
 
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
       <div
       className="absolute inset-0 -z-10 bg-cover bg-center"
-      style={{ backgroundImage: "url('/hero-background.png')" }}/>
+      style={{ backgroundImage: `url('${BASE_PATH}/hero-background.png')` }}/>
       {/* Voile pour garder le texte lisible */}
       <div className="absolute inset-0 -z-10 bg-ivoire/70" />
       {/* Sceau géant en filigrane — fil rouge de la maison */}
