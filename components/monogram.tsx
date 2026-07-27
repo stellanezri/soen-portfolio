@@ -1,6 +1,6 @@
 import { site } from '@/lib/content'
 import { cn } from '@/lib/utils'
-import Image from "next/image"
+import { BaseImage as Image } from '@/components/base-image'
 
 /**
  * Sceau / monogramme de la maison.

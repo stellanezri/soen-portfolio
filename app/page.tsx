@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { BaseImage as Image } from '@/components/base-image'
 import { ArrowUpRight } from 'lucide-react'
 import { Hero } from '@/components/home/hero'
 import { SectionHeading } from '@/components/section-heading'
