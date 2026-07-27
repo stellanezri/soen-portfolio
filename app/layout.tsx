@@ -54,11 +54,6 @@ export const metadata: Metadata = {
     description: site.metaDescription,
     images: [`${BASE_PATH}/og-image.png`],
   },
-  icons: {
-    icon: `${BASE_PATH}/icon.png`,
-    shortcut: `${BASE_PATH}/icon.png`,
-    apple: `${BASE_PATH}/apple-icon.png`,
-  },
 }
 
 export const viewport: Viewport = {
