@@ -12,13 +12,7 @@ export const metadata: Metadata = {
   description: personal.intro,
 }
 
-export default async function PersonalPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ projet?: string }>
-}) {
-  const { projet } = await searchParams
-
+export default function PersonalPage() {
   return (
     <>
       <PageHeader
@@ -31,13 +25,13 @@ export default async function PersonalPage({
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-6xl">
           <Suspense fallback={null}>
-            <PersonalCatalogue initialSlug={projet} />
+            <PersonalCatalogue />
           </Suspense>
 
           {/* Bandeau Instagram */}
           <Reveal className="mt-6">
-            <a
-              href={personal.instagram.href}
+            
+            <a href={personal.instagram.href}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-camel p-8 text-ivoire transition-colors hover:bg-cocoa md:flex-row md:items-center md:p-12"
@@ -61,3 +55,4 @@ export default async function PersonalPage({
     </>
   )
 }
+

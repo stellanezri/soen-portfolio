@@ -2,9 +2,12 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // GitHub Pages ne supporte pas l'optimisation d'image Next.js
+    unoptimized: true,
   },
-  basePath: '/nom-de-ton-repo', // uniquement si ton site n'est PAS sur username.github.io (repo racine)
+  basePath: process.env.NODE_ENV === 'production' ? '/soen-portfolio' : '',
+  turbopack: {
+    root: import.meta.dirname,
+  },
 }
 
 export default nextConfig

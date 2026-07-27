@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   description: 'Catalogue numéroté de mes projets marketing : campagnes, contenus, événements et digital.',
 }
 
-export default async function RealisationsPage({
+export default function RealisationsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ projet?: string }>
+  searchParams?: { projet?: string }
 }) {
-  const { projet } = await searchParams
+  const projet = searchParams?.projet
 
   return (
     <>

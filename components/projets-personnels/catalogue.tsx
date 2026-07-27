@@ -7,8 +7,12 @@ import { ArrowUpRight, X } from 'lucide-react'
 import { personal, type PersonalProject } from '@/lib/content'
 import { Reveal } from '@/components/reveal'
 import { cn } from '@/lib/utils'
+import { useSearchParams } from 'next/navigation'
 
-export function PersonalCatalogue({ initialSlug }: { initialSlug?: string }) {
+export function PersonalCatalogue() {
+  const searchParams = useSearchParams()
+  const initialSlug = searchParams.get('projet') ?? undefined
+
   const items = personal.items as unknown as PersonalProject[]
 
   const categories = useMemo(
