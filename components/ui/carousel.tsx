@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
+import { BaseImage as Image } from '@/components/base-image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export function ProjectCarousel({ gallery }: { gallery: Array<{ src: string; alt?: string; type?: 'image' | 'video' }> }) {
@@ -20,7 +20,7 @@ export function ProjectCarousel({ gallery }: { gallery: Array<{ src: string; alt
         >
           {item.type === 'video' ? (
             <video
-              src={item.src}
+              src={`${BASE_PATH}${item.src}`}
               controls
               className="max-h-full max-w-full object-contain"
             />
