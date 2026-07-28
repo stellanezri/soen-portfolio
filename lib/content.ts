@@ -60,7 +60,7 @@ export const contact = {
 /* --- HERO (page d'accueil) --- */
 export const hero = {
   eyebrow: 'Portfolio — Édition 2026',
-  backgroundImage: '/hero-background.png',
+  backgroundImage: '/hero-background.webp',
   titleLines: ['Stella', 'Nezri'],
   valueProposition:
     'Bilingue franco-américaine, deux ans à transformer des idées en contenus qui engagent. Je cherche l’alternance qui donnera une dimension internationale à ce savoir-faire.',
@@ -95,7 +95,7 @@ export const about = {
     { label: 'Localisation', value: 'Nice — mobilité internationale' },
     { label: 'Disponibilité', value: 'Août 2026' },
   ],
-  portrait: '/images/portrait-stella-a-propos.jpg',
+  portrait: '/images/portrait-stella-a-propos.webp',
 } as const
 
 /* --- COMPÉTENCES  --- */
@@ -167,7 +167,7 @@ export const projects: Project[] = [
     year: '2024 → 2026',
     client: 'Ludi SFM — Nice',
     role: 'Marketing & Community Management',
-    cover: '/images/recrut-linkedin-ludi.png',
+    cover: '/images/recrut-linkedin-ludi.webp',
     summary:
       'Gestion et animation de la page LinkedIn de l’entreprise, avec une ligne de contenu régulière et cohérente.',
     challenge:
@@ -184,10 +184,10 @@ export const projects: Project[] = [
     ],
     tags: ['LinkedIn', 'Community management', 'Création de contenu'],
     gallery: [
-      { src: '/images/post-recrut-linkedin.png', alt: 'Post NOUS RECRUTONS Sales Executive' },
-      { src: '/images/post-money-gong.jpg', alt: 'Post Money Gong' },
-      { src: '/images/post-v-line-alfastreet.jpg', alt: 'Post V-line' },
-      { src: '/images/post-prism-element.png', alt: 'Post Prism Element' },
+      { src: '/images/post-recrut-linkedin.webp', alt: 'Post NOUS RECRUTONS Sales Executive' },
+      { src: '/images/post-money-gong.webp', alt: 'Post Money Gong' },
+      { src: '/images/post-v-line-alfastreet.webp', alt: 'Post V-line' },
+      { src: '/images/post-prism-element.webp', alt: 'Post Prism Element' },
     ]
   },
   {
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     year: '2024 → 2026',
     client: 'Ludi SFM — Nice',
     role: 'Création visuelle',
-    cover: '/images/goodies-ludi-beige.jpeg',
+    cover: '/images/goodies-ludi-beige.webp',
     summary:
       'Conception de contenus visuels multilingues : posts, goodies, signatures et éléments de marque.',
     challenge:
@@ -214,11 +214,11 @@ export const projects: Project[] = [
     ],
     tags: ['Design', 'Direction artistique', 'Outils de création'],
     gallery: [
-      { src: '/images/goodies-ludi-beige.jpeg', alt: 'Goodies Ludi' },
-      { src: '/images/signature-mail-noel-ludi.png', alt: 'Signature Mail Noël Ludi' },
-      { src: '/images/post-modulus.jpg', alt: 'Post Chinese NYE Modulus 2025' },
-      { src: '/images/card-modulus.jpg', alt: 'E-card Chinese NYE Modulus 2025' },
-      { src: '/images/post-moduloween.png', alt: 'Post Moduloween' },
+      { src: '/images/goodies-ludi-beige.webp', alt: 'Goodies Ludi' },
+      { src: '/images/signature-mail-noel-ludi.webp', alt: 'Signature Mail Noël Ludi' },
+      { src: '/images/post-modulus.webp', alt: 'Post Chinese NYE Modulus 2025' },
+      { src: '/images/card-modulus.webp', alt: 'E-card Chinese NYE Modulus 2025' },
+      { src: '/images/post-moduloween.webp', alt: 'Post Moduloween' },
     ]
   },
   {
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     year: '2024',
     client: 'ZARA — Cannes',
     role: 'Vendeuse (CDD)',
-    cover: '/images/zara-retail-pic.jpg',
+    cover: '/images/zara-retail-pic.webp',
     summary:
       'Vente, merchandising et gestion des stocks en boutique, avec des objectifs commerciaux quotidiens.',
     challenge:
@@ -244,7 +244,7 @@ export const projects: Project[] = [
       { value: 'Flexibilité', label: 'sur la gestion du rayon pendant les temps forts' },
     ],
     tags: ['Vente directe', 'Relation client', 'Gestion de la pression'],
-    gallery: [{ src: '/images/zara-retail-pic.jpg', alt: 'Retail Zara' },]
+    gallery: [{ src: '/images/zara-retail-pic.webp', alt: 'Retail Zara' },]
   },
   {
     slug: 'kit-instagram',
@@ -253,7 +253,7 @@ export const projects: Project[] = [
     year: '2026',
     client: 'Atelier Meaunn',
     role: 'Stratégie de contenu & Brand Identity',
-    cover: '/images/kit-instagram-atelier-meaunn-1.jpg',
+    cover: '/images/kit-instagram-atelier-meaunn-1.webp',
     summary:
       'Conception d’une stratégie Instagram complète pour une marque artisanale de luminaires.',
     challenge:
@@ -270,21 +270,21 @@ export const projects: Project[] = [
     ],
     tags: ['Instagram', 'Stratégie de contenu', 'Brand Identity', 'Media Planning'],
     gallery: [
-      { src: '/images/kit-instagram-atelier-meaunn-1.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-2.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-3.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-4.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-5.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-6.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-7.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-8.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-9.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-10.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-11.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-12.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-13.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-14.jpg', alt: 'Kit Instagram Atelier Meaunn' },
-      { src: '/images/kit-instagram-atelier-meaunn-15.jpg', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-1.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-2.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-3.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-4.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-5.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-6.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-7.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-8.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-9.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-10.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-11.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-12.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-13.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-14.webp', alt: 'Kit Instagram Atelier Meaunn' },
+      { src: '/images/kit-instagram-atelier-meaunn-15.webp', alt: 'Kit Instagram Atelier Meaunn' },
     ]
   },
   {
@@ -294,7 +294,7 @@ export const projects: Project[] = [
     year: '2024 → 2026',
     client: 'Ludi SFM — Nice',
     role: 'Production & Traduction',
-    cover: '/images/luckyup-alfastreet.png',
+    cover: '/images/luckyup-alfastreet.webp',
     summary:
       'Production et traduction de supports commerciaux en français et en anglais : règles de jeux, fiches produits, présentations.',
     challenge:
@@ -311,8 +311,8 @@ export const projects: Project[] = [
     ],
     tags: ['Bilingue', 'Traduction', 'Supports commerciaux', 'Identité de marque'],
     gallery: [
-      { src: '/images/luck-rising-rgl.png', alt: 'Luck Rising RGL' },
-      { src: '/images/luckyup-alfastreet.png', alt: 'Lucky Up Alfastreet' },
+      { src: '/images/luck-rising-rgl.webp', alt: 'Luck Rising RGL' },
+      { src: '/images/luckyup-alfastreet.webp', alt: 'Lucky Up Alfastreet' },
     ]
   },
 ]
@@ -326,7 +326,7 @@ export const caseStudy = {
   ],
   context:
     'Ludi SFM m’a confié, dès novembre 2024, une partie de la communication et la création de contenu de l’entreprise. Le Ludi Show en est le point d’orgue : un rendez-vous ludique où se rencontrent contenu, marque et cible. C’est une exposition organisée dans les locaux pour présenter les nouveautés en machines à sous et jeux de casino à une sélection de clients. Pour la 3ème édition, je me suis chargée de plusieurs volets, de l’identité visuelle à l’expérience client sur place.',
-  cover: '/images/bienvenue-ludi-show.png',
+  cover: '/images/bienvenue-ludi-show.webp',
   mission:
     'Faire de cette édition un moment de marque cohérent, de l’identité visuelle jusqu’à l’expérience vécue. Concrètement : concevoir l’identité visuelle du Ludi Show, sélectionner et décliner les goodies, et contribuer à l’expérience client.',
   chapters: [
@@ -354,15 +354,15 @@ export const caseStudy = {
     { value: '9', label: 'goodies déclinés, du kakemono aux polos' },
   ],
 gallery: [
-      { type: 'image', src: '/images/enseigne-ludi-hall.png' },
-      { type: 'image', src: '/images/ludi-showroom-barriere.jpg' },
-      { type: 'image', src: '/images/kakemono-ludi.jpg' },
-      { type: 'image', src: '/images/ludi-showroom-1.jpg' },
-      { type: 'image', src: '/images/ludi-showroom-roulette.jpg' },
-      { type: 'image', src: '/images/ludi-showroom-alfastreet.jpg' },
-      { type: 'image', src: '/images/Totebag-Black.png' },
-      { type: 'image', src: '/images/Polo.png' },
-      { type: 'image', src: '/images/Porte-carte.png' },
+      { type: 'image', src: '/images/enseigne-ludi-hall.webp' },
+      { type: 'image', src: '/images/ludi-showroom-barriere.webp' },
+      { type: 'image', src: '/images/kakemono-ludi.webp' },
+      { type: 'image', src: '/images/ludi-showroom-1.webp' },
+      { type: 'image', src: '/images/ludi-showroom-roulette.webp' },
+      { type: 'image', src: '/images/ludi-showroom-alfastreet.webp' },
+      { type: 'image', src: '/images/Totebag-Black.webp' },
+      { type: 'image', src: '/images/Polo.webp' },
+      { type: 'image', src: '/images/Porte-carte.webp' },
     ],
 } as const
 
@@ -371,7 +371,7 @@ gallery: [
  * ?projet=slug), un type (catégorie de filtre), et une galerie pouvant
  * contenir plusieurs images et/ou vidéos. Pour ajouter des médias à un
  * projet existant, ajoute simplement des entrées dans son tableau `gallery` :
- *   { type: 'image', src: '/images/mon-visuel-2.jpg' }
+ *   { type: 'image', src: '/images/mon-visuel-2.webp' }
  *   { type: 'video', src: '/videos/mon-clip.mp4' }
  */
 export type PersonalMedia = { type: 'image' | 'video'; src: string; poster?: string }
@@ -396,16 +396,16 @@ export const personal = {
       slug: 'focus-shooting-photo',
       title: 'FOCUS — Shooting photo',
       type: 'Photographie & Direction artistique',
-      image: '/images/focus-design-1.jpeg',
+      image: '/images/focus-design-1.webp',
       description: 'Modèle photo pour ce shooting et à l’origine de la direction artistique finale, entre regard et typographie serif superposée.',
       details: [
         'Direction artistique complète du shooting : choix du regard, de la lumière et de la mise en page.',
         'Superposition d’une typographie serif pour ancrer l’image dans un univers éditorial plutôt que purement photographique.',
       ],
       gallery: [
-      { type: 'image', src: '/images/focus-design-1.jpeg' },
-      { type: 'image', src: '/images/focus-shoot-1.jpg' }, 
-      { type: 'image', src: '/images/focus-shoot-2.jpg' },
+      { type: 'image', src: '/images/focus-design-1.webp' },
+      { type: 'image', src: '/images/focus-shoot-1.webp' }, 
+      { type: 'image', src: '/images/focus-shoot-2.webp' },
     // { type: 'video', src: '/videos/focus-video.mp4' }  // si tu veux une vidéo
       ],   
     },
@@ -414,66 +414,66 @@ export const personal = {
       title: 'Unboxing — Tiktok',
       type: 'Vidéo',
       video: '/videos/unboxing-micros.mp4',
-      image: '/images/cover-unboxing-micros.jpg',
+      image: '/images/cover-unboxing-micros.webp',
       description: 'Montage CapCut dynamique d’un unboxing, rythmé pour capter l’attention dès les premières secondes sur TikTok.',
       details: [
         'Montage entièrement réalisé sur CapCut, avec un rythme de coupes calé sur les codes natifs du format court.',
         'Accroche construite sur les 3 premières secondes pour éviter le scroll et retenir l’attention jusqu’au bout.',
       ],
       gallery: [
-        { type: 'video', src: '/videos/unboxing-micros.mp4', poster: '/images/cover-unboxing-micros.jpg' },
+        { type: 'video', src: '/videos/unboxing-micros.mp4', poster: '/images/cover-unboxing-micros.webp' },
       ],
     },
     {
       slug: 'feed-instagram-identite',
       title: 'Feed Instagram — Identité',
       type: 'Design & Branding',
-      image: '/images/feed-ig-atelier-meaunn.png',
+      image: '/images/feed-ig-atelier-meaunn.webp',
       description: 'Qui a dit qu’un compte Instagram professionnel ne pouvait pas contenir une structure visuelle cohérente et rythmée à l’image du créateur?',
       details: [
         'Construction d’une grille de publication pensée pour se lire d’un seul coup d’œil : alternance de plans serrés sur la matière, de mises en scène du produit et de respirations plus lifestyle.',
         'Harmonisation de la palette et de la lumière sur l’ensemble des visuels pour que le feed fonctionne comme une vitrine, pas comme une suite de posts isolés.',
       ],
-      gallery: [{ type: 'image', src: '/images/feed-ig-atelier-meaunn.png' }],
+      gallery: [{ type: 'image', src: '/images/feed-ig-atelier-meaunn.webp' }],
     },
     {
       slug: 'publicite-photobooth-tiktok',
       title: 'Publicité Photobooth — TikTok',
       type: 'Vidéo',
       video: '/videos/photobooth-tiktok.mp4',
-      image: '/images/cover-photobooth.jpg',
+      image: '/images/cover-photobooth.webp',
       description: 'Montage et formats courts pour la campagne publicitaire fictive d’un street photobooth, pensés pour l’algorithme et l’engagement TikTok.',
       details: [
         'Écriture d’un scénario publicitaire fictif pensé pour un format court, avec une accroche dans les 3 premières secondes.',
         'Montage rythmé, cuts courts et transitions calées sur le son, dans les codes natifs de TikTok plutôt qu’en simple adaptation d’un format vidéo classique.',
       ],
       gallery: [
-        { type: 'video', src: '/videos/photobooth-tiktok.mp4', poster: '/images/cover-photobooth.jpg' },
+        { type: 'video', src: '/videos/photobooth-tiktok.mp4', poster: '/images/cover-photobooth.webp' },
       ],
     },
     {
       slug: 'identite-visuelle-soen',
       title: 'Identité visuelle — SOEN',
       type: 'Design & Branding',
-      image: '/images/crea-soen-2026.png',
+      image: '/images/crea-soen-2026.webp',
       description: 'Construction de mon identité de marque personnelle : logo, palette, typographie et univers verbal autour de mon nom.',
       details: [
         'Construction d’un acronyme (Shine. Own. Earn. Navigate.) autour de mon nom pour porter une identité de marque personnelle plutôt qu’un simple portfolio.',
         'Choix d’une palette de tons chauds et d’une esthétique proche du "old money" pour incarner une élégance sobre et durable, à l’opposé des codes saturés habituels.',
       ],
-      gallery: [{ type: 'image', src: '/images/crea-soen-2026.png' }],
+      gallery: [{ type: 'image', src: '/images/crea-soen-2026.webp' }],
     },
     {
       slug: 'proposition-crm-hubspot',
       title: 'Proposition de CRM — HubSpot',
       type: 'Stratégie & Business',
-      image: '/images/proposition-crm-ludi.png',
+      image: '/images/proposition-crm-ludi.webp',
       description: 'Conception et présentation d’un plan de déploiement de CRM en 3 phases pour Ludi SFM afin de suivre ses 204 casinos clients.',
       details: [
         'Structuration d’un plan de déploiement en 3 phases (cadrage & migration des données, prise en main commerciale, pilotage par le reporting) pour rendre le projet finançable et actionnable.',
         'Réflexion pensée pour le contexte réel de Ludi SFM : un portefeuille de 204 casinos clients à suivre sans perte d’information entre les commerciaux.',
       ],
-      gallery: [{ type: 'image', src: '/images/proposition-crm-ludi.png' }],
+      gallery: [{ type: 'image', src: '/images/proposition-crm-ludi.webp' }],
     },
     {
       slug: 'portfolio-soen',
