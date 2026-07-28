@@ -9,7 +9,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden">
       <div
       className="absolute inset-0 -z-10 bg-cover bg-center"
-      style={{ backgroundImage: `url('${BASE_PATH}/hero-background.png')` }}/>
+      style={{ backgroundImage: `url('${BASE_PATH}/hero-background.webp')` }}/>
       {/* Voile pour garder le texte lisible */}
       <div className="absolute inset-0 -z-10 bg-ivoire/70" />
       {/* Sceau géant en filigrane — fil rouge de la maison */}
