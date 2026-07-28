@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { BaseImage as Image } from '@/components/base-image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { BASE_PATH } from '@/lib/base-path'
 
 export function ProjectCarousel({ gallery }: { gallery: Array<{ src: string; alt?: string; type?: 'image' | 'video' }> }) {
   const [current, setCurrent] = useState(0)
