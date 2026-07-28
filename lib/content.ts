@@ -355,7 +355,7 @@ export const caseStudy = {
   ],
 gallery: [
       { type: 'image', src: '/images/enseigne-ludi-hall.png' },
-      { type: 'image', src: '/images/ludi-showroom-barrière.jpg' },
+      { type: 'image', src: '/images/ludi-showroom-barriere.jpg' },
       { type: 'image', src: '/images/kakemono-ludi.jpg' },
       { type: 'image', src: '/images/ludi-showroom-1.jpg' },
       { type: 'image', src: '/images/ludi-showroom-roulette.jpg' },
