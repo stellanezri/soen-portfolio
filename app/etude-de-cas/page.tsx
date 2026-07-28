@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import { BaseImage as Image } from '@/components/base-image'
 import { PageHeader } from '@/components/page-header'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
@@ -25,7 +25,6 @@ export default function CaseStudyPage() {
               fill
               className="object-cover"
               sizes="100vw"
-              priority
             />
           </div>
         </Reveal>

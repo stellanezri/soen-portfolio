@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Monogram } from '@/components/monogram'
 import { Reveal } from '@/components/reveal'
-import Image from "next/image"
+import { BaseImage as Image } from '@/components/base-image'
 
 export function CtaBand({
   title = 'Prête à rejoindre votre équipe.',
