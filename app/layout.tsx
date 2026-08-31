@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import { site } from '@/lib/content'
 import { BASE_PATH } from '@/lib/base-path'
 import './globals.css'
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     default: `${site.name} - Portfolio`,
     template: `%s — ${site.name}`,
   },
-  description: site.metaDescription,
+  description: site.metaDescription.fr,
   alternates: {
     canonical: '/',
   },
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: `${site.name} - Portfolio`,
     title: `${site.name} - Portfolio`,
-    description: site.metaDescription,
+    description: site.metaDescription.fr,
     images: [
       {
         url: `${BASE_PATH}/og-image.png`,
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} - Portfolio`,
-    description: site.metaDescription,
+    description: site.metaDescription.fr,
     images: [`${BASE_PATH}/og-image.png`],
   },
 }
@@ -69,9 +70,11 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${fraunces.variable} ${inter.variable} bg-background`}>
       <body className="font-sans">
-        <SiteHeader />
-        <main id="contenu">{children}</main>
-        <SiteFooter />
+        <LanguageProvider>
+          <SiteHeader />
+          <main id="contenu">{children}</main>
+          <SiteFooter />
+        </LanguageProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

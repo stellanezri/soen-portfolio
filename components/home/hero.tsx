@@ -1,27 +1,29 @@
+"use client"
+
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Monogram } from '@/components/monogram'
 import { hero, site } from '@/lib/content'
 import { BASE_PATH } from '@/lib/base-path'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function Hero() {
+  const { lang } = useLanguage()
+
   return (
     <section className="relative isolate overflow-hidden">
       <div
-      className="absolute inset-0 -z-10 bg-cover bg-center"
-      style={{ backgroundImage: `url('${BASE_PATH}/hero-background.webp')` }}/>
-      {/* Voile pour garder le texte lisible */}
-      <div className="absolute inset-0 -z-10 bg-ivoire/70" />
-      {/* Sceau géant en filigrane — fil rouge de la maison */}
-      <Monogram
-        showRing={false}
+        className="absolute inset-0 -z-10 bg-cover bg-center"
+        style={{ backgroundImage: `url('${BASE_PATH}/hero-background.webp')` }}
       />
+      <div className="absolute inset-0 -z-10 bg-ivoire/70" />
+      <Monogram showRing={false} />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-14 px-5 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24 lg:flex-row lg:items-center lg:gap-16">
         <div className="flex-1">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-ivoire px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-cocoa">
             <Monogram className="size-4 text-camel" showRing={false} />
-            {hero.eyebrow}
+            {hero.eyebrow[lang]}
           </span>
 
           <h1 className="mt-7 text-balance font-serif text-5xl leading-[0.98] tracking-tight text-espresso sm:text-6xl md:text-7xl">
@@ -37,7 +39,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            {hero.valueProposition}
+            {hero.valueProposition[lang]}
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -45,27 +47,27 @@ export function Hero() {
               href={hero.primaryCta.href}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-espresso px-7 py-3.5 text-sm text-ivoire transition-colors hover:bg-cocoa"
             >
-              {hero.primaryCta.label}
+              {hero.primaryCta.label[lang]}
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href={hero.secondaryCta.href}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-espresso/25 px-7 py-3.5 text-sm text-espresso transition-colors hover:bg-espresso hover:text-ivoire"
             >
-              {hero.secondaryCta.label}
+              {hero.secondaryCta.label[lang]}
             </Link>
           </div>
 
           <dl className="mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
             {hero.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt className="sr-only">{fact.label}</dt>
+              <div key={fact.label.fr}>
+                <dt className="sr-only">{fact.label[lang]}</dt>
                 <dd>
                   <span className="block font-serif text-3xl text-cocoa md:text-4xl">
-                    {fact.value}
+                    {fact.value[lang]}
                   </span>
                   <span className="mt-1 block text-sm leading-snug text-muted-foreground">
-                    {fact.label}
+                    {fact.label[lang]}
                   </span>
                 </dd>
               </div>
@@ -73,7 +75,6 @@ export function Hero() {
           </dl>
         </div>
 
-        {/* Carte identité — sceau encadré */}
         <div className="relative w-full max-w-sm shrink-0 lg:w-[22rem]">
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-ivoire">
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 p-8 text-center">
@@ -81,12 +82,12 @@ export function Hero() {
               <div>
                 <p className="font-serif text-2xl tracking-tight text-espresso">{site.name}</p>
                 <p className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">
-                  {site.location}
+                  {site.location[lang]}
                 </p>
               </div>
               <div className="mt-2 h-px w-16 bg-camel" aria-hidden="true" />
               <p className="text-pretty text-sm leading-relaxed text-muted-foreground">
-                {site.degree}
+                {site.degree[lang]}
               </p>
             </div>
           </div>

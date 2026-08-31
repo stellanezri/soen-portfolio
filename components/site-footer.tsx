@@ -1,9 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import { Monogram } from '@/components/monogram'
 import { contact, nav, site } from '@/lib/content'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export function SiteFooter() {
+  const { lang } = useLanguage()
   const year = new Date().getFullYear()
+
+  const t = (field: any) => (typeof field === 'string' ? field : field?.[lang] ?? '')
+
   return (
     <footer className="relative overflow-hidden bg-espresso text-linen">
       {/* Monogramme en filigrane — fil rouge de la maison */}
@@ -19,19 +26,21 @@ export function SiteFooter() {
               <span className="font-serif text-2xl tracking-tight">{site.name}</span>
             </div>
             <p className="mt-5 text-pretty leading-relaxed text-linen/70">
-              {site.role}. {site.degree}.
+              {t(site.role)}. {t(site.degree)}.
             </p>
             <Link
               href="/contact"
               className="mt-7 inline-block rounded-full bg-ivoire px-6 py-3 text-sm text-espresso transition-colors hover:bg-khaki"
             >
-              Discutons-en !
+              {lang === 'fr' ? 'Discutons-en !' : 'Let’s talk!'}
             </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-10 sm:gap-16">
             <div>
-              <h2 className="text-xs uppercase tracking-[0.2em] text-linen/50">Navigation</h2>
+              <h2 className="text-xs uppercase tracking-[0.2em] text-linen/50">
+                {lang === 'fr' ? 'Navigation' : 'Navigation'}
+              </h2>
               <ul className="mt-5 flex flex-col gap-3">
                 {nav.map((item) => (
                   <li key={item.href}>
@@ -39,14 +48,16 @@ export function SiteFooter() {
                       href={item.href}
                       className="text-sm text-linen/80 transition-colors hover:text-ivoire"
                     >
-                      {item.label}
+                      {t(item.label)}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-xs uppercase tracking-[0.2em] text-linen/50">Contact</h2>
+              <h2 className="text-xs uppercase tracking-[0.2em] text-linen/50">
+                {lang === 'fr' ? 'Contact' : 'Contact'}
+              </h2>
               <ul className="mt-5 flex flex-col gap-3">
                 <li>
                   <a
@@ -83,9 +94,9 @@ export function SiteFooter() {
 
         <div className="mt-14 flex flex-col gap-2 border-t border-ivoire/10 pt-6 text-xs text-linen/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} Stella Nezri. Tous droits réservés.
+            © {year} Stella Nezri. {lang === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'}
           </p>
-          <p>{contact.city}</p>
+          <p>{t(contact.city)}</p>
         </div>
       </div>
     </footer>

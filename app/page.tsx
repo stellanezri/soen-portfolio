@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { BaseImage as Image } from '@/components/base-image'
 import { ArrowUpRight } from 'lucide-react'
@@ -6,15 +8,38 @@ import { SectionHeading } from '@/components/section-heading'
 import { Reveal } from '@/components/reveal'
 import { CtaBand } from '@/components/cta-band'
 import { projects, caseStudy, about, personal } from '@/lib/content'
+import { useLanguage } from '@/contexts/LanguageContext'
+import type { Bi } from '@/lib/content'
 
-const journey = [
-  { href: '/a-propos', label: 'À propos', desc: 'Qui je suis, d’où je viens, où je vais.' },
-  { href: '/competences', label: 'Compétences', desc: 'Ce que je maîtrise, entre stratégie et création.' },
-  { href: '/realisations', label: 'Réalisations', desc: 'Entrez directement dans le vif du sujet.' },
-  { href: '/etude-de-cas', label: 'Étude de cas', desc: 'Ludi Show 3e édition : un projet décortiqué.' },
+const journey: { href: string; label: Bi; desc: Bi }[] = [
+  { href: '/a-propos', label: { fr: 'À propos', en: 'About' }, desc: { fr: 'Qui je suis, d’où je viens, où je vais.', en: 'Who I am, where I come from, where I’m going.' } },
+  { href: '/competences', label: { fr: 'Compétences', en: 'Skills' }, desc: { fr: 'Ce que je maîtrise, entre stratégie et création.', en: 'What I master, between strategy and creation.' } },
+  { href: '/realisations', label: { fr: 'Réalisations', en: 'Portfolio' }, desc: { fr: 'Entrez directement dans le vif du sujet.', en: 'Get straight to the heart of the matter.' } },
+  { href: '/etude-de-cas', label: { fr: 'Étude de cas', en: 'Case study' }, desc: { fr: 'Ludi Show 3e édition : un projet décortiqué.', en: 'Ludi Show, 3rd edition: a project broken down.' } },
 ]
 
+const journeyEyebrow: Bi = { fr: 'Le parcours', en: 'The journey' }
+const journeyTitle: Bi = { fr: 'Suivez le fil ;)', en: 'Follow the thread ;)' }
+const journeyIntro: Bi = { fr: 'Quatre entrées pour découvrir comment je travaille, ce que je sais faire, et ce que ça donne concrètement.', en: 'Four entry points to discover how I work, what I can do, and what it looks like in practice.' }
+
+const aboutEyebrow: Bi = { fr: 'À propos', en: 'About' }
+const aboutTitle: Bi = { fr: 'Un profil solaire, créatif et rigoureux.', en: 'A bright, creative, rigorous profile.' }
+const discoverLink: Bi = { fr: 'Découvrir mon parcours', en: 'Discover my journey' }
+
+const realisationsEyebrow: Bi = { fr: 'Réalisations', en: 'Portfolio' }
+const realisationsTitle: Bi = { fr: 'Des projets, pas des promesses.', en: 'Projects, not promises.' }
+const realisationsIntro: Bi = { fr: 'Réseaux sociaux, contenus, traduction : chaque projet compte.', en: 'Social media, content, translation: every project counts.' }
+const fullCatalogLink: Bi = { fr: 'Tout le catalogue', en: 'Full catalog' }
+
+const readCaseStudyLink: Bi = { fr: 'Lire l’étude de cas', en: 'Read the case study' }
+
+const personalEyebrow: Bi = { fr: 'Projets personnels', en: 'Personal projects' }
+const personalTitle: Bi = { fr: 'Ce que je construis à côté.', en: 'What I build on the side.' }
+const personalIntro: Bi = { fr: 'Modeling, branding, testing : mes projets perso.', en: 'Modeling, branding, testing: my personal projects.' }
+const allProjectsLink: Bi = { fr: 'Tous les projets', en: 'All projects' }
+
 export default function HomePage() {
+  const { lang } = useLanguage()
   const featured = projects.slice(0, 3)
   const featuredPersonal = personal.items.slice(0, 3)
 
@@ -27,9 +52,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <SectionHeading
-              eyebrow="Le parcours"
-              title="Suivez le fil ;)"
-              intro="Quatre entrées pour découvrir comment je travaille, ce que je sais faire, et ce que ça donne concrètement."
+              eyebrow={journeyEyebrow[lang]}
+              title={journeyTitle[lang]}
+              intro={journeyIntro[lang]}
             />
           </Reveal>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
@@ -44,11 +69,11 @@ export default function HomePage() {
                   </span>
                   <span>
                     <span className="flex items-center gap-1.5 font-serif text-xl text-espresso">
-                      {step.label}
+                      {step.label[lang]}
                       <ArrowUpRight className="size-4 text-cocoa transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                     <span className="mt-2 block text-sm leading-relaxed text-muted-foreground">
-                      {step.desc}
+                      {step.desc[lang]}
                     </span>
                   </span>
                 </Link>
@@ -73,20 +98,20 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal className="order-1 lg:order-2" delay={100}>
-            <SectionHeading eyebrow="À propos" title="Un profil solaire, créatif et rigoureux." />
+            <SectionHeading eyebrow={aboutEyebrow[lang]} title={aboutTitle[lang]} />
             <div className="mt-6 space-y-6 text-pretty text-lg leading-relaxed text-muted-foreground">
-              {about.intro.map((paragraph, index) => (
+              {about.intro[lang].map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
             <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-              {about.paragraphs[0]}
+              {about.paragraphs[lang][0]}
             </p>
             <Link
               href="/a-propos"
               className="mt-8 inline-flex items-center gap-2 border-b border-cocoa/40 pb-1 text-sm text-cocoa transition-colors hover:border-cocoa"
             >
-              Découvrir mon parcours
+              {discoverLink[lang]}
               <ArrowUpRight className="size-4" />
             </Link>
           </Reveal>
@@ -98,15 +123,15 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Réalisations"
-              title="Des projets, pas des promesses."
-              intro="Réseaux sociaux, contenus, traduction : chaque projet compte."
+              eyebrow={realisationsEyebrow[lang]}
+              title={realisationsTitle[lang]}
+              intro={realisationsIntro[lang]}
             />
             <Link
               href="/realisations"
               className="inline-flex shrink-0 items-center gap-2 rounded-full border border-espresso/25 px-6 py-3 text-sm text-espresso transition-colors hover:bg-espresso hover:text-ivoire"
             >
-              Tout le catalogue
+              {fullCatalogLink[lang]}
               <ArrowUpRight className="size-4" />
             </Link>
           </Reveal>
@@ -121,7 +146,7 @@ export default function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={project.cover || '/placeholder.svg'}
-                      alt={project.title}
+                      alt={project.title[lang]}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -132,10 +157,10 @@ export default function HomePage() {
                   </div>
                   <div className="p-5">
                     <span className="text-xs uppercase tracking-[0.15em] text-camel">
-                      {project.category}
+                      {project.categoryLabel[lang]}
                     </span>
                     <h3 className="mt-2 font-serif text-xl leading-snug text-espresso">
-                      {project.title}
+                      {project.title[lang]}
                     </h3>
                   </div>
                 </Link>
@@ -144,8 +169,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-    
 
       {/* Teaser étude de cas */}
       <section className="px-5 py-20 md:px-8 md:py-28">
@@ -161,13 +184,13 @@ export default function HomePage() {
           </div>
           <div className="p-8 md:p-12">
             <span className="text-xs uppercase tracking-[0.25em] text-camel">
-              {caseStudy.eyebrow}
+              {caseStudy.eyebrow[lang]}
             </span>
             <h2 className="mt-4 font-serif text-4xl tracking-tight text-ivoire md:text-5xl">
               {caseStudy.title}
             </h2>
             <div className="mt-5 space-y-4 text-pretty leading-relaxed text-linen/75">
-              {caseStudy.subtitle.map((line, index) => (
+              {caseStudy.subtitle[lang].map((line, index) => (
                 <p key={index}>{line}</p>
               ))}
             </div>
@@ -175,34 +198,34 @@ export default function HomePage() {
               href="/etude-de-cas"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-ivoire px-7 py-3.5 text-sm text-espresso transition-colors hover:bg-khaki"
             >
-              Lire l’étude de cas
+              {readCaseStudyLink[lang]}
               <ArrowUpRight className="size-4" />
             </Link>
           </div>
         </Reveal>
       </section>
 
-   {/* Aperçu projets personnels */}
+      {/* Aperçu projets personnels */}
       <section className="border-t border-border bg-ivoire px-5 py-20 md:px-8 md:py-28">
         <div className="mx-auto max-w-6xl">
           <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <SectionHeading
-              eyebrow="Projets personnels"
-              title="Ce que je construis à côté."
-              intro="Modeling, branding, testing : mes projets perso."
+              eyebrow={personalEyebrow[lang]}
+              title={personalTitle[lang]}
+              intro={personalIntro[lang]}
             />
             <Link
               href="/projets-personnels"
               className="inline-flex shrink-0 items-center gap-2 rounded-full border border-espresso/25 px-6 py-3 text-sm text-espresso transition-colors hover:border-espresso"
             >
-              Tous les projets
+              {allProjectsLink[lang]}
               <ArrowUpRight className="size-4" />
             </Link>
           </Reveal>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {featuredPersonal.map((project: any, i) => (
-              <Reveal key={project.title} delay={i * 90}>
+            {featuredPersonal.map((project, i) => (
+              <Reveal key={project.slug} delay={i * 90}>
                 <Link
                   href={`/projets-personnels?projet=${project.slug}`}
                   className="group block overflow-hidden rounded-2xl border border-border bg-linen transition-colors hover:border-espresso/40"
@@ -210,7 +233,7 @@ export default function HomePage() {
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
                       src={project.image || '/placeholder.svg'}
-                      alt={project.title}
+                      alt={project.title[lang]}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
@@ -221,10 +244,10 @@ export default function HomePage() {
                   </div>
                   <div className="p-5">
                     <span className="text-xs uppercase tracking-[0.15em] text-camel">
-                      {project.type}
+                      {project.type[lang]}
                     </span>
                     <h3 className="mt-2 font-serif text-xl leading-snug text-espresso">
-                      {project.title}
+                      {project.title[lang]}
                     </h3>
                   </div>
                 </Link>
