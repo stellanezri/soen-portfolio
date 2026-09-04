@@ -522,7 +522,7 @@ export const personal = {
       slug: 'portfolio-soen',
       title: { fr: 'Portfolio — SOEN', en: 'Portfolio — SOEN' },
       type: { fr: 'Design & Branding', en: 'Design & Branding' },
-      image: '/images/portfolio-soen-cover.webp',
+      image: '/images/portfolio-soen-cover.svg',
       description: { fr: 'Et si je vous disais que vous êtes en train de le parcourir ? Ce portfolio a été conçu par mes soins pour présenter mon travail et mes compétences.', en: 'What if I told you that you’re looking at it right now? This portfolio was designed by me to showcase my work and skills.' },
       details: {
         fr: ['Développement du site en Next.js, TypeScript et Tailwind CSS, avec un contenu entièrement centralisé pour pouvoir tout modifier sans toucher au design.', 'Passage d’un premier prototype généré sur v0.app à une version locale, plus pérenne et éditable, déployée sur Netlify.'],
