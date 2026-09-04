@@ -197,8 +197,7 @@ function ProjectDetail({
                 src={gallery[0].src || '/placeholder.svg'}
                 alt={project.title[lang]}
                 fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 42rem"
+                className={gallery[0].src.endsWith('.svg') ? 'object-contain p-8' : 'object-cover'}                sizes="(max-width: 768px) 100vw, 42rem"
               />
             </div>
           )}
@@ -259,7 +258,7 @@ function ProjectDetail({
                         src={media.src || '/placeholder.svg'}
                         alt={`${project.title[lang]} — visuel ${i + 2}`}
                         fill
-                        className="object-cover"
+                        className={media.src.endsWith('.svg') ? 'object-contain p-6' : 'object-cover'}
                         sizes="(max-width: 640px) 100vw, 21rem"
                       />
                     </div>

@@ -529,7 +529,7 @@ export const personal = {
         en: ['Building the site with Next.js, TypeScript, and Tailwind CSS, with fully centralized content so everything can be edited without touching the design.', 'Moving from an initial prototype generated on v0.app to a more durable, locally editable version, deployed on Netlify.'],
       },
       gallery: [
-        { type: 'image', src: '/images/portfolio-soen-cover.webp' },
+        { type: 'image', src: '/images/portfolio-soen-cover.svg' },
         { type: 'image', src: '/s-logo-soen.svg' },
       ],
     },
