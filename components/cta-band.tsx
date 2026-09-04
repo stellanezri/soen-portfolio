@@ -9,7 +9,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import type { Bi } from '@/lib/content'
 
 const defaultTitle: Bi = { fr: 'Prête à rejoindre votre équipe.', en: 'Ready to join your team.' }
-const defaultText: Bi = { fr: 'Une alternance, une mission, un café pour échanger ? Je réponds sous 24 h.', en: 'A work-study role, an assignment, or just a coffee to chat? I reply within 24 hours.' }
+const defaultText: Bi = { fr: 'Une mission, une collaboration, un café pour échanger ? Je réponds sous 24 h.', en: 'A project, a collaboration,or just a coffee to chat? I reply within 24 hours.' }
 const contactLabel: Bi = { fr: 'Me contacter', en: 'Contact me' }
 const viewWorkLabel: Bi = { fr: 'Voir mes réalisations', en: 'View my work' }
 

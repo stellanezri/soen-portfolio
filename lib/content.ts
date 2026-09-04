@@ -27,12 +27,12 @@ export type Bi = { fr: string; en: string }
 export const site = {
   name: 'S.O.E.N',
   monogram: 'SN',
-  role: { fr: 'Assistante Marketing - en recherche d’alternance', en: 'Marketing Assistant — seeking a work-study placement' } as Bi,
-  degree: { fr: 'Bachelor in Management, spécialisation International Business', en: 'Bachelor in Management, International Business specialization' } as Bi,
+  role: { fr: 'Brand & Marketing Assistant chez Hellenist', en: 'Brand & Marketing Assistant at Hellenist.' } as Bi,
+  degree: { fr: 'Bachelor in Management, spécialisation International Business', en: 'Bachelor in Management specialized in International Business' } as Bi,
   location: { fr: 'Nice, France', en: 'Nice, France' } as Bi,
   metaDescription: {
-    fr: 'Portfolio de Stella Nezri, Assistante Marketing avec 2 ans d’expérience en contenu, communication et stratégie commerciale B2B, en recherche d’une alternance de 12 mois orientée développement, export et commerce international pour son Bachelor in Management spécialisation International Business à l’IPAG Business School à Nice.',
-    en: 'Portfolio of Stella Nezri, Marketing Assistant with 2 years of experience in content, communications, and B2B sales strategy, seeking a 12-month work-study placement in business development, export, or international trade for her Bachelor in Management, International Business specialization, at IPAG Business School in Nice.',
+    fr: 'Portfolio de Stella Nezri, Assistante Brand & Marketing en alternance chez Hellenist, marque de parfum de niche basée à Nice, dans le cadre de son Bachelor in Management, spécialisation International Business à l’IPAG Business School.',
+    en: 'Portfolio of Stella Nezri, Brand & Marketing Assistant on a work-study program at Hellenist, a niche perfume brand based in Nice, as part of her Bachelor in Management specialized in International Business at IPAG Business School.',
   } as Bi,
 } as const
 
@@ -67,8 +67,8 @@ export const hero = {
   backgroundImage: '/hero-background.webp',
   titleLines: ['Stella', 'Nezri'],
   valueProposition: {
-    fr: 'Bilingue franco-américaine, deux ans à transformer des idées en contenus qui engagent. Je cherche l’alternance qui donnera une dimension internationale à ce savoir-faire.',
-    en: 'Bilingual French-American, with two years spent turning ideas into content that engages. I’m looking for the work-study placement that will give this expertise an international dimension.',
+    fr: 'Bilingue, deux ans à transformer des idées en contenus qui engagent. Depuis septembre 2026, je mets ce savoir-faire au service d’Hellenist, marque de parfum de niche, en tant qu’Assistante Brand & Marketing.',
+    en: 'Bilingual, two years spent turning ideas into content that engages. Since September 2026, I’ve been putting that know-how to work at Hellenist, a niche perfume brand, as Brand & Marketing Assistant.',
   } as Bi,
   primaryCta: { label: { fr: 'Me recruter', en: 'Hire me' } as Bi, href: '/contact' },
   secondaryCta: { label: { fr: 'Voir mes réalisations', en: 'View my work' } as Bi, href: '/realisations' },
@@ -93,29 +93,31 @@ export const about = {
   },
   paragraphs: {
     fr: [
-      'Depuis novembre 2024, j’occupe le poste d’Assistante Marketing en alternance chez Ludi SFM, une Société B2B de Fourniture et de Maintenance pour les machines à sous et jeux de casinos. J’y conçois des supports commerciaux bilingues FR/EN, je crée des contenus visuels et textuels, et j’anime la page LinkedIn afin de la faire grandir.',
+      'Depuis septembre 2026, j’occupe le poste d’Assistante Brand & Marketing en alternance chez Hellenist, une marque de parfum de niche basée à Nice. Je participe à la création et à la programmation de contenus pour les réseaux sociaux, à la coordination des supports marketing et commerciaux, et au suivi des rendez-vous et présentations pour les distributeurs et partenaires.',
+      'Avant Hellenist, j’ai passé près de deux ans chez Ludi SFM, société niçoise B2B de fourniture et de maintenance de machines à sous et jeux de casinos, où j’ai conçu des supports commerciaux bilingues FR/EN, créé des contenus visuels et fait grandir la page LinkedIn de l’entreprise.',
       'Mais mon parcours ne s’est pas construit uniquement derrière un ordinateur.',
       'J’ai grandi en région parisienne jusqu’à mes 17 ans, entre une mère américaine et un père marseillais : le français et l’anglais ont toujours été deux langues du quotidien, pas deux matières scolaires. Cette double culture m’a très tôt donné le goût de regarder les choses sous plusieurs angles, et une certaine allergie aux réponses toutes faites.',
       'Après le bac, j’ai posé mes valises à Nice en démarrant par une Licence en Langues Étrangères Appliquées Anglais-Espagnol, histoire de poser des bases solides avant de me spécialiser. J’ai vite compris que ce que je cherchais n’était pas seulement les langues en elles-mêmes, mais tout ce qu’elles permettent de faire une fois qu’on les met au service d’une stratégie. J’ai donc fini par bifurquer vers un Bachelor en Marketing Digital. C’est là que j’ai compris que ma curiosité pour le langage, l’image, la psychologie de la vente, pouvait devenir un vrai métier plutôt qu’une liste de centres d’intérêt.',
       'Avant d’évoluer dans le marketing, j’ai travaillé directement au contact des clients, notamment au Crowne Plaza Hotel à Nice puis chez ZARA à Cannes. Ces expériences B2C m’ont appris la relation client, la rigueur opérationnelle, la gestion de la pression et surtout l’importance de comprendre les besoins d’une personne avant de vouloir lui vendre une solution.',
-      'Ce qui me fait avancer, au fond, c’est tout ce qui nourrit mon âme : me renseigner, discuter, sortir de ma zone de confort intellectuelle. En septembre 2026, j’intègre ma 3e année de Bachelor in Management, spécialisation International Business, à l’IPAG Business School, une formation entièrement dispensée en anglais et je recherche une alternance de 12 mois en développement, export ou commerce international, la suite logique d’un parcours construit sur l’envie d’apprendre, pas sur un plan tracé d’avance.',
+      'Ce qui me fait avancer, au fond, c’est tout ce qui nourrit mon âme : me renseigner, discuter, sortir de ma zone de confort intellectuelle. En septembre 2026, j’ai intégré ma 3e année de Bachelor in Management en spécialisation International Business, à l’IPAG Business School, une formation entièrement dispensée en anglais, en parallèle de mon alternance chez Hellenist, la suite logique d’un parcours construit sur l’envie d’apprendre, pas sur un plan tracé d’avance.',
     ],
     en: [
-      'Since November 2024, I’ve held a work-study Marketing Assistant position at Ludi SFM, a B2B company supplying and maintaining slot machines and casino gaming equipment. I design bilingual FR/EN sales materials, create visual and written content, and manage the company’s LinkedIn page to grow it.',
+      'Since September 2026, I’ve been working as a Brand & Marketing Assistant on a work-study program at Hellenist, a niche perfume brand based in Nice. I help create and schedule social media content, coordinate marketing and sales materials, and support meetings and presentations for distributors and partners.',
+      'Before Hellenist, I spent nearly two years at Ludi SFM, a Nice-based B2B company supplying and maintaining cabinets and games for casinos, where I designed bilingual FR/EN sales materials, created visual content, and grew the company’s LinkedIn page.',
       'But my path wasn’t built entirely behind a computer.',
-      'I grew up in the Paris region until I was 17, with an American mother and a father from Marseille: French and English were always two everyday languages, not two school subjects. This dual culture gave me an early taste for looking at things from multiple angles, and a certain allergy to ready-made answers.',
+      'I grew up in the Paris region until I was 17, with an American mother and a father from Marseille, South of France: French and English were always two everyday languages, not two school subjects. This dual culture gave me an early taste for looking at things from multiple angles, and a certain allergy to ready-made answers.',
       'After graduating high school, I settled in Nice, starting with a degree in Applied Foreign Languages (English-Spanish), to build a solid foundation before specializing. I quickly realized what I was looking for wasn’t the languages themselves, but everything they let you do once you put them to work for a strategy. So I ended up pivoting toward a Bachelor’s in Digital Marketing. That’s where I understood that my curiosity for language, imagery, and the psychology of selling could become an actual career rather than just a list of interests.',
       'Before moving into marketing, I worked directly with customers, notably at the Crowne Plaza Hotel in Nice and then at ZARA in Cannes. These B2C experiences taught me customer relations, operational rigor, handling pressure, and above all the importance of understanding someone’s needs before trying to sell them a solution.',
-      'What drives me, at the core, is anything that feeds my mind: researching, discussing, stepping outside my intellectual comfort zone. In September 2026, I’m starting my third year of a Bachelor in Management, International Business specialization, at IPAG Business School — a program taught entirely in English — and I’m looking for a 12-month work-study placement in business development, export, or international trade: the logical next step in a path built on the desire to learn, not on a plan laid out in advance.',
+      'What drives me, at heart, is everything that feeds my soul and mind: learning, discussing, stepping outside my intellectual comfort zone. In September 2026, I started my 3rd year of a Bachelor in Management specialized in International Business, at IPAG Business School, a program taught entirely in English, alongside my work-study program at Hellenist, the logical next step in a path built on the desire to learn, not on a plan mapped out in advance.',
     ],
   },
   facts: [
-    { label: { fr: 'Formation', en: 'Education' } as Bi, value: { fr: 'B1 & B2 Marketing Digital • B3 in Management spé International Business', en: 'Years 1–2: Digital Marketing • Year 3: Management, International Business specialization' } as Bi },
-    { label: { fr: 'Expérience', en: 'Experience' } as Bi, value: { fr: '3 ans — Marketing • Communication • Vente • Relation client', en: '3 years — Marketing • Communications • Sales • Customer relations' } as Bi },
-    { label: { fr: 'Langues', en: 'Languages' } as Bi, value: { fr: 'Français & Anglais (bilingue), Espagnol (B1)', en: 'French & English (bilingual), Spanish (intermediate)' } as Bi },
+    { label: { fr: 'Formation', en: 'Education' } as Bi, value: { fr: 'B1 & B2 Marketing Digital • B3 in Management spé International Business', en: 'Years 1–2: Digital Marketing • Year 3: Management, International Business' } as Bi },
+    { label: { fr: 'Expérience', en: 'Experience' } as Bi, value: { fr: '4 ans — Marketing • Communication • Vente • Relation client', en: '4 years — Marketing • Communications • Sales • Customer relations' } as Bi },
+    { label: { fr: 'Langues', en: 'Languages' } as Bi, value: { fr: 'Français & Anglais (bilingue), Espagnol (intermédiaire)', en: 'French & English (bilingual), Spanish (intermediate)' } as Bi },
     { label: { fr: 'Rythme', en: 'Schedule' } as Bi, value: { fr: 'Alternance 1 semaine école / 3 semaines entreprise', en: 'Work-study: 1 week school / 3 weeks company' } as Bi },
     { label: { fr: 'Localisation', en: 'Location' } as Bi, value: { fr: 'Nice — mobilité internationale', en: 'Nice — open to international relocation' } as Bi },
-    { label: { fr: 'Disponibilité', en: 'Availability' } as Bi, value: { fr: 'Août 2026', en: 'August 2026' } as Bi },
+    { label: { fr: 'Disponibilité', en: 'Availability' } as Bi, value: { fr: 'En alternance chez Hellenist (depuis sept. 2026)', en: 'Work-study at Hellenist (since Sept. 2026)' } as Bi },
   ],
   portrait: '/images/portrait-stella-a-propos.webp',
 } as const
