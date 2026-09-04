@@ -27,7 +27,7 @@ export type Bi = { fr: string; en: string }
 export const site = {
   name: 'S.O.E.N',
   monogram: 'SN',
-  role: { fr: 'Brand & Marketing Assistant chez Hellenist', en: 'Brand & Marketing Assistant at Hellenist.' } as Bi,
+  role: { fr: 'Brand & Marketing Assistant chez Hellenist', en: 'Brand & Marketing Assistant at Hellenist' } as Bi,
   degree: { fr: 'Bachelor in Management, spécialisation International Business', en: 'Bachelor in Management specialized in International Business' } as Bi,
   location: { fr: 'Nice, France', en: 'Nice, France' } as Bi,
   metaDescription: {
@@ -53,7 +53,7 @@ export const contact = {
   email: 'stella.nzri@gmail.com',
   phone: '+33 6 12 75 40 49',
   city: { fr: 'Nice & Côte d’Azur - mobilité internationale', en: 'Nice & French Riviera — open to international relocation' } as Bi,
-  availability: { fr: 'Disponible dès août 2026 - rythme 1 semaine école / 3 semaines entreprise', en: 'Available from August 2026 — 1 week school / 3 weeks company schedule' } as Bi,
+  availability: { fr: 'En alternance chez Hellenist (rythme 1 semaine école / 3 semaines entreprise) — ouverte aux missions ponctuelles et collaborations', en: 'Work-study at Hellenist (schedule: 1 week school / 3 weeks company) — open to one-off projects and collaborations' } as Bi,
   cvUrl: "/CV-Stella-Nezri-FR-US.pdf",
   socials: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/stella-nezri-829b3522a/', handle: '/in/stella-nezri' },
@@ -83,11 +83,11 @@ export const hero = {
 export const about = {
   intro: {
     fr: [
-      'Je suis Stella, 21 ans, Assistante Marketing bilingue franco-américaine. J’aime apprendre, tester, comprendre. La création de contenu autant que la stratégie commerciale ne sont, au fond, que deux façons de nourrir la même curiosité.',
+      'Je suis Stella, 21 ans, Brand & Marketing Assistant bilingue franco-américaine. J’aime apprendre, tester, comprendre. La création de contenu autant que la stratégie commerciale ne sont, au fond, que deux façons de nourrir la même curiosité.',
       'Chaque expérience, qu’elle ait eu lieu derrière un écran ou sur le terrain, m’a appris quelque chose de différent. C’est ce parcours que je raconte ici.',
     ],
     en: [
-      'I’m Stella, 21, a bilingual French-American Marketing Assistant. I like learning, testing, understanding. Content creation and sales strategy are, at their core, just two ways of feeding the same curiosity.',
+      'I’m Stella, 21, a bilingual French-American Brand & Marketing Assistant. I like learning, testing, understanding. Content creation and sales strategy are, at their core, just two ways of feeding the same curiosity.',
       'Every experience, whether behind a screen or out in the field, has taught me something different. This is the path I’m telling here.',
     ],
   },
@@ -522,14 +522,14 @@ export const personal = {
       slug: 'portfolio-soen',
       title: { fr: 'Portfolio — SOEN', en: 'Portfolio — SOEN' },
       type: { fr: 'Design & Branding', en: 'Design & Branding' },
-      image: '/plain-logo-soen.svg',
+      image: '/images/portfolio-soen-cover.webp',
       description: { fr: 'Et si je vous disais que vous êtes en train de le parcourir ? Ce portfolio a été conçu par mes soins pour présenter mon travail et mes compétences.', en: 'What if I told you that you’re looking at it right now? This portfolio was designed by me to showcase my work and skills.' },
       details: {
         fr: ['Développement du site en Next.js, TypeScript et Tailwind CSS, avec un contenu entièrement centralisé pour pouvoir tout modifier sans toucher au design.', 'Passage d’un premier prototype généré sur v0.app à une version locale, plus pérenne et éditable, déployée sur Netlify.'],
         en: ['Building the site with Next.js, TypeScript, and Tailwind CSS, with fully centralized content so everything can be edited without touching the design.', 'Moving from an initial prototype generated on v0.app to a more durable, locally editable version, deployed on Netlify.'],
       },
       gallery: [
-        { type: 'image', src: '/plain-logo-soen.svg' },
+        { type: 'image', src: '/images/portfolio-soen-cover.webp' },
         { type: 'image', src: '/s-logo-soen.svg' },
       ],
     },
@@ -540,8 +540,8 @@ export const personal = {
 export const contactPage = {
   title: { fr: 'Travaillons ensemble.', en: 'Let’s work together.' } as Bi,
   intro: {
-    fr: 'Vous cherchez une alternante créative, minutieuse et orientée résultats pour une mission de 12 mois orientée développement ou commerce international ? Parlons-en.',
-    en: 'Looking for a creative, detail-oriented, results-driven work-study student for a 12-month assignment in business development or international trade? Let’s talk.',
+    fr: 'Brand & Marketing Assistant en alternance chez Hellenist, ouverte aux collaborations, missions ponctuelles et opportunités qui donneront une dimension internationale à mon parcours. Parlons-en.',
+    en: 'Brand & Marketing Assistant on a work-study program at Hellenist, open to collaborations, one-off projects, and opportunities that add an international dimension to my path. Let’s talk.',
   } as Bi,
   reasons: {
     fr: [

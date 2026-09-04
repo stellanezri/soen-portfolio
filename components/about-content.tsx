@@ -11,7 +11,7 @@ import type { Bi } from '@/lib/content'
 const pageTitle: Bi = { fr: 'Plus qu’un parcours, une évolution.', en: 'More than a path: a progression.' }
 const pageEyebrow: Bi = { fr: 'À propos', en: 'About' }
 const ctaTitle: Bi = { fr: 'Envie d’en savoir plus ?', en: 'Want to know more?' }
-const ctaText: Bi = { fr: 'Mon CV bilingue complet et mes références sont à un message près.', en: 'My full bilingual CV and references are just a message away.' }
+const ctaText: Bi = { fr: 'Mon CV bilingue complet et mes références sont à un message près.', en: 'My full bilingual resume and references are just a message away.' }
 
 export function AboutContent() {
   const { lang } = useLanguage()
