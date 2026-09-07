@@ -14,7 +14,7 @@ const emailLabel: Bi = { fr: 'E-mail', en: 'Email' }
 const phoneLabel: Bi = { fr: 'Téléphone', en: 'Phone' }
 const locationLabel: Bi = { fr: 'Localisation', en: 'Location' }
 const availabilityLabel: Bi = { fr: 'Disponibilité', en: 'Availability' }
-const downloadCvLabel: Bi = { fr: 'Télécharger mon CV', en: 'Download my CV' }
+const downloadCvLabel: Bi = { fr: 'Télécharger mon CV', en: 'Download my resume' }
 
 export function ContactContent() {
   const { lang } = useLanguage()
