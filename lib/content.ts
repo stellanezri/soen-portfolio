@@ -75,7 +75,7 @@ export const hero = {
   facts: [
     { value: { fr: '2 ans', en: '2 years' } as Bi, label: { fr: 'd’expérience en environnement B2B', en: 'of experience in B2B environments' } as Bi },
     { value: { fr: '+28 %', en: '+28%' } as Bi, label: { fr: 'de croissance d’une communauté LinkedIn', en: 'LinkedIn community growth' } as Bi },
-    { value: { fr: '3 langues', en: '3 languages' } as Bi, label: { fr: 'FR · EN · ESP', en: 'FR · EN · ES' } as Bi },
+    { value: { fr: '3 langues', en: '3 languages' } as Bi, label: { fr: 'FR · EN · ESP', en: 'FR · EN · ESP' } as Bi },
   ],
 } as const
 
