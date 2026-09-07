@@ -67,7 +67,7 @@ export const hero = {
   backgroundImage: '/hero-background.webp',
   titleLines: ['Stella', 'Nezri'],
   valueProposition: {
-    fr: 'Bilingue, deux ans à transformer des idées en contenus qui engagent. Depuis septembre 2026, je mets ce savoir-faire au service d’Hellenist, marque de parfum de niche, en tant qu’Assistante Brand & Marketing.',
+    fr: 'Bilingue, deux ans à transformer des idées en contenus qui engagent. Depuis septembre 2026, je mets ce savoir-faire au service d’Hellenist, marque de parfum de niche, en tant que Brand & Marketing Assistant.',
     en: 'Bilingual, two years spent turning ideas into content that engages. Since September 2026, I’ve been putting that know-how to work at Hellenist, a niche perfume brand, as Brand & Marketing Assistant.',
   } as Bi,
   primaryCta: { label: { fr: 'Me recruter', en: 'Hire me' } as Bi, href: '/contact' },
