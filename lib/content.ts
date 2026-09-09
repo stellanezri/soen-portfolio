@@ -31,7 +31,7 @@ export const site = {
   degree: { fr: 'Bachelor in Management, spécialisation International Business', en: 'Bachelor in Management specialized in International Business' } as Bi,
   location: { fr: 'Nice, France', en: 'Nice, France' } as Bi,
   metaDescription: {
-    fr: 'Portfolio de Stella Nezri, Assistante Brand & Marketing en alternance chez Hellenist, marque de parfum de niche basée à Nice, dans le cadre de son Bachelor in Management, spécialisation International Business à l’IPAG Business School.',
+    fr: 'Portfolio de Stella Nezri, Brand & Marketing Assistant en alternance chez Hellenist, marque de parfum de niche basée à Nice, dans le cadre de son Bachelor in Management, spécialisation International Business à l’IPAG Business School.',
     en: 'Portfolio of Stella Nezri, Brand & Marketing Assistant on a work-study program at Hellenist, a niche perfume brand based in Nice, as part of her Bachelor in Management specialized in International Business at IPAG Business School.',
   } as Bi,
 } as const
@@ -93,7 +93,7 @@ export const about = {
   },
   paragraphs: {
     fr: [
-      'Depuis septembre 2026, j’occupe le poste d’Assistante Brand & Marketing en alternance chez Hellenist, une marque de parfum de niche basée à Nice. Je participe à la création et à la programmation de contenus pour les réseaux sociaux, à la coordination des supports marketing et commerciaux, et au suivi des rendez-vous et présentations pour les distributeurs et partenaires.',
+      'Depuis septembre 2026, j’occupe le poste de Brand & Marketing Assistant en alternance chez Hellenist, une marque de parfum de niche basée à Nice. Je participe à la création et à la programmation de contenus pour les réseaux sociaux, à la coordination des supports marketing et commerciaux, et au suivi des rendez-vous et présentations pour les distributeurs et partenaires.',
       'Avant Hellenist, j’ai passé près de deux ans chez Ludi SFM, société niçoise B2B de fourniture et de maintenance de machines à sous et jeux de casinos, où j’ai conçu des supports commerciaux bilingues FR/EN, créé des contenus visuels et fait grandir la page LinkedIn de l’entreprise.',
       'Mais mon parcours ne s’est pas construit uniquement derrière un ordinateur.',
       'J’ai grandi en région parisienne jusqu’à mes 17 ans, entre une mère américaine et un père marseillais : le français et l’anglais ont toujours été deux langues du quotidien, pas deux matières scolaires. Cette double culture m’a très tôt donné le goût de regarder les choses sous plusieurs angles, et une certaine allergie aux réponses toutes faites.',
