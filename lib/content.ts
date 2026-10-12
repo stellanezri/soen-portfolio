@@ -184,7 +184,7 @@ export const hardSkills = {
 export type Project = {
   slug: string
   title: Bi
-  category: 'Contenu' | 'Digital' | 'Traduction' | 'Retail'
+  category: 'Contenu' | 'Digital' | 'Traduction' | 'Retail' | 'Evenement'
   categoryLabel: Bi
   year: string
   client: string
@@ -202,12 +202,12 @@ export const projects: Project[] = [
   {
     slug: 'tfwa-my-odyssey',
     title: { fr: 'TFWA Cannes 2026 — Stand My Odyssey', en: 'TFWA Cannes 2026 — My Odyssey booth' },
-    category: 'Retail',
-    categoryLabel: { fr: 'Évènement', en: 'Event' },
+    category: 'Evenement',
+    categoryLabel: { fr: 'Evenement', en: 'Event' },
     year: '2026',
     client: 'Hellenist',
     role: { fr: 'Animation de stand & Brand Marketing', en: 'Booth hosting & Brand Marketing' },
-    cover: '/images/tfwa-my-odyssey-cover.webp',
+    cover: '/images/reeds-hellenist.webp',
     summary: {
       fr: 'Animation du stand My Odyssey by Hellenist au TFWA Cannes 2026 : présentation des collections de parfums et bougies, et confection du Discovery kit - My Odyssey remis à chaque invité.',
       en: 'Hosting Hellenist’s My Odyssey booth at TFWA Cannes 2026: presenting the fragrance and candle collections, and preparing the My Odyssey Discovery Kit handed to each guest.',
@@ -234,12 +234,17 @@ export const projects: Project[] = [
       { value: { fr: 'TFWA 2026', en: 'TFWA 2026' }, label: { fr: 'Cannes, salon du travel retail', en: 'Cannes, travel retail trade show' } },
     ],
     tags: {
-      fr: ['Évènementiel', 'Parfumerie de niche', 'Relation client', 'Brand marketing'],
+      fr: ['Evenementiel', 'Parfumerie de niche', 'Relation client', 'Brand marketing'],
       en: ['Event', 'Niche perfumery', 'Customer relations', 'Brand marketing'],
     },
     gallery: [
-      { src: '/images/tfwa-my-odyssey-1.webp', alt: 'Stand My Odyssey — TFWA Cannes 2026' },
-      { src: '/images/tfwa-my-odyssey-2.webp', alt: 'Kits découverte Hellenist' },
+      { src: '/images/myo-stand-hellenist.webp', alt: 'Stand My Odyssey' },
+      { src: '/images/myo-pancarte-hellenist.webp', alt: 'Pancarte My Odyssey' },
+      { src: '/images/myo-stella-hellenist.webp', alt: 'Stella sur le stand My Odyssey' },
+      { src: '/images/reeds-hellenist.webp', alt: 'Reed diffusers & capillas' },
+      { src: '/images/jd-hellenist.webp', alt: 'Présentation des collections par Jean-David Jacoby, Fondateur d’Hellenist' },
+      { src: '/images/coffre-hellenist.webp', alt: 'Découverte du coffret My Odyssey par des guests' },
+      { src: '/images/vase-hellenist.webp', alt: 'Détail de la réception, décor et douceurs' },
     ],
   },
   {

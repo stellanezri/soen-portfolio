@@ -10,14 +10,18 @@ import { cn } from '@/lib/utils'
 import { ProjectCarousel } from '@/components/ui/carousel'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const categoriesFr = ['Tous', 'Digital', 'Contenu', 'Retail', 'Évènement'] as const
-const categoriesEn = ['All', 'Digital', 'Content', 'Retail', 'Event'] as const
+const categories = [
+  { key: 'all', fr: 'Tous', en: 'All' },
+  { key: 'Digital', fr: 'Digital', en: 'Digital' },
+  { key: 'Contenu', fr: 'Contenu', en: 'Content' },
+  { key: 'Retail', fr: 'Retail', en: 'Retail' },
+  { key: 'Evenement', fr: 'Évènement', en: 'Event' },
+] as const
 
 export function Catalogue({ initialSlug }: { initialSlug?: string } = {}) {
   const { lang } = useLanguage()
-  const categories = lang === 'fr' ? categoriesFr : categoriesEn
 
-  const [filter, setFilter] = useState<string>('Tous')
+  const [filter, setFilter] = useState<string>('all')
   const [active, setActive] = useState<Project | null>(null)
 
   useEffect(() => {
@@ -25,18 +29,10 @@ export function Catalogue({ initialSlug }: { initialSlug?: string } = {}) {
     setActive(projects.find((p) => p.slug === resolvedInitialSlug) ?? null)
   }, [initialSlug])
 
-  // Reset filter when language changes
-  useEffect(() => {
-    setFilter(lang === 'fr' ? 'Tous' : 'All')
-  }, [lang])
-
   const filtered = useMemo(() => {
-    if (filter === 'Tous' || filter === 'All') return projects
-    return projects.filter((p) => {
-      const cat = typeof p.category === 'string' ? p.category : p.category[lang]
-      return cat === filter
-    })
-  }, [filter, lang])
+    if (filter === 'all') return projects
+    return projects.filter((p) => p.category === filter)
+  }, [filter])
 
   // Verrouille le scroll du corps quand la fiche est ouverte + fermeture au clavier
   useEffect(() => {
@@ -61,18 +57,18 @@ export function Catalogue({ initialSlug }: { initialSlug?: string } = {}) {
       <div className="flex flex-wrap gap-2.5" role="group" aria-label="Filtrer les réalisations">
         {categories.map((cat) => (
           <button
-            key={cat}
+            key={cat.key}
             type="button"
-            onClick={() => setFilter(cat)}
-            aria-pressed={filter === cat}
+            onClick={() => setFilter(cat.key)}
+            aria-pressed={filter === cat.key}
             className={cn(
               'rounded-full border px-5 py-2 text-sm transition-colors',
-              filter === cat
+              filter === cat.key
                 ? 'border-espresso bg-espresso text-ivoire'
                 : 'border-border bg-linen text-espresso hover:border-camel',
             )}
           >
-            {cat}
+            {cat[lang]}
           </button>
         ))}
       </div>
@@ -100,7 +96,7 @@ export function Catalogue({ initialSlug }: { initialSlug?: string } = {}) {
               </div>
               <div className="flex flex-1 flex-col p-6">
                 <div className="flex items-center gap-3 text-xs uppercase tracking-[0.15em] text-camel">
-                  <span>{t(project.category)}</span>
+                  <span>{t(project.categoryLabel)}</span>
                   <span className="h-px w-4 bg-camel" aria-hidden="true" />
                   <span>{project.year}</span>
                 </div>
@@ -181,7 +177,7 @@ function ProjectDetail({
 
         <div className="px-6 py-8 md:px-8 md:py-10">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.15em] text-camel">
-            <span>{t(project.category)}</span>
+            <span>{t(project.categoryLabel)}</span>
             <span className="h-px w-4 bg-camel" aria-hidden="true" />
             <span>{project.year}</span>
           </div>
