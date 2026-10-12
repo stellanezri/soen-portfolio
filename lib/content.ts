@@ -143,15 +143,15 @@ export const hardSkills = {
     {
       title: { fr: 'Marketing & Communication', en: 'Marketing & Communication' } as Bi,
       items: {
-        fr: ['Création de contenus & supports FR/EN', 'Stratégie & gestion de réseaux sociaux (LinkedIn B2B)', 'Identité visuelle & charte graphique', 'Suivi des tendances', 'Copywriting & rédaction technique', 'Communication externe'],
-        en: ['Content creation & materials (FR/EN)', 'Social media strategy & management (B2B LinkedIn)', 'Visual identity & brand guidelines', 'Trend monitoring', 'Copywriting & technical writing', 'External communications'],
+        fr: ['Création de contenus & supports FR/EN', 'Stratégie & gestion de réseaux sociaux (LinkedIn B2B)', 'Identité visuelle & charte graphique', 'Suivi des tendances', 'Copywriting & rédaction technique', 'Communication externe', 'Animation de stand & événementiel', 'Présentation de produit'],
+        en: ['Content creation & materials (FR/EN)', 'Social media strategy & management (B2B LinkedIn)', 'Visual identity & brand guidelines', 'Trend monitoring', 'Copywriting & technical writing', 'External communications', 'Booth hosting & event activation', 'Product presentation'],
       },
     },
     {
       title: { fr: 'Commerce & Relation client', en: 'Sales & Customer Relations' } as Bi,
       items: {
-        fr: ['Stratégie de vente', 'Relation client', 'Gestion des stocks & réassort', 'Atteinte d’objectifs chiffrés', 'Veille tendances & actualités'],
-        en: ['Sales strategy', 'Customer relations', 'Inventory management & restocking', 'Meeting sales targets', 'Trend & industry monitoring'],
+        fr: ['Stratégie de vente', 'Relation client', 'Gestion des stocks & réassort', 'Atteinte d’objectifs chiffrés', 'Veille tendances & actualités', 'Culture produit (parfumerie de niche)', 'Organisation & logistique événementielle'],
+        en: ['Sales strategy', 'Customer relations', 'Inventory management & restocking', 'Meeting sales targets', 'Trend & industry monitoring', 'Product knowledge (niche perfumery)', 'Event organisation & logistics'],
       },
     },
     {

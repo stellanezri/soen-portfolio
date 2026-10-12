@@ -9,8 +9,8 @@ import type { Bi } from "@/lib/content"
 const pageEyebrow: Bi = { fr: "Réalisations", en: "Work" }
 const pageTitle: Bi = { fr: "Des projets, pas des promesses.", en: "Projects, not promises." }
 const pageIntro: Bi = {
-  fr: "Réseaux sociaux, contenus, traduction : chaque projet compte.",
-  en: "Social media, content, translation: every project counts.",
+  fr: "Réseaux sociaux, contenus, évènements : chaque projet compte.",
+  en: "Social media, content, events: every project counts.",
 }
 const ctaTitle: Bi = { fr: "Un projet en tête ?", en: "Got a project in mind?" }
 const ctaText: Bi = { fr: "Parlons-en dès aujourd’hui.", en: "Let’s talk about it today." }

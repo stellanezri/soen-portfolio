@@ -1,24 +1,36 @@
 // Clé = libellé FR exact tel qu'écrit dans hardSkills.groups[].items.fr
 export const skillProjects: Record<string, string[]> = {
-  'Création de contenus & supports FR/EN': ['creation-visuelle', 'supports-bilingues', 'feed-instagram-identite'],
+  // Marketing & Communication
+  'Création de contenus & supports FR/EN': ['linkedin-ludi', 'creation-visuelle', 'supports-bilingues', 'portfolio-soen'],
   'Stratégie & gestion de réseaux sociaux (LinkedIn B2B)': ['linkedin-ludi', 'kit-instagram'],
-  'Identité visuelle & charte graphique': ['identite-visuelle-soen', 'feed-instagram-identite', 'kit-instagram'],
-  'Suivi des tendances': ['unboxing-tiktok', 'publicite-photobooth-tiktok', 'feed-instagram-identite'],
+  'Identité visuelle & charte graphique': ['creation-visuelle', 'kit-instagram', 'feed-instagram-identite', 'identite-visuelle-soen', 'portfolio-soen'],
+  'Suivi des tendances': ['linkedin-ludi', 'unboxing-tiktok', 'publicite-photobooth-tiktok'],
   'Copywriting & rédaction technique': ['linkedin-ludi', 'supports-bilingues'],
-  'Communication multilingue': ['supports-bilingues', 'creation-visuelle'],
+  'Communication externe': ['linkedin-ludi', 'kit-instagram', 'tfwa-my-odyssey'],
+  'Animation de stand & événementiel': ['tfwa-my-odyssey'],
+  'Présentation de produit': ['tfwa-my-odyssey'],
+
+  // Commerce & Relation client
   'Stratégie de vente': ['retail-zara', 'proposition-crm-hubspot'],
-  'Relation client': ['retail-zara'],
+  'Relation client': ['retail-zara', 'proposition-crm-hubspot', 'tfwa-my-odyssey'],
   'Gestion des stocks & réassort': ['retail-zara'],
   'Atteinte d’objectifs chiffrés': ['retail-zara'],
-  'Veille tendances & actualités': ['unboxing-tiktok', 'publicite-photobooth-tiktok'],
-  'Photoshop': ['creation-visuelle', 'identite-visuelle-soen'],
-  'Illustrator': ['identite-visuelle-soen'],
-  'Affinity': ['identite-visuelle-soen'],
-  'Canva': ['kit-instagram', 'feed-instagram-identite'],
+  'Veille tendances & actualités': ['linkedin-ludi', 'unboxing-tiktok', 'publicite-photobooth-tiktok'],
+  'Culture produit (parfumerie de niche)': ['tfwa-my-odyssey'],
+  'Organisation & logistique événementielle': ['tfwa-my-odyssey'],
+
+  // Outils
+  'Canva': ['creation-visuelle', 'kit-instagram', 'feed-instagram-identite'],
+  'Photoshop': ['creation-visuelle'],
   'CapCut': ['unboxing-tiktok', 'publicite-photobooth-tiktok'],
+
+  // Réseaux sociaux
   'Instagram': ['kit-instagram', 'feed-instagram-identite'],
   'LinkedIn': ['linkedin-ludi'],
   'TikTok': ['unboxing-tiktok', 'publicite-photobooth-tiktok'],
+
+  // International & Langues
+  'Communication multilingue': ['creation-visuelle', 'supports-bilingues', 'portfolio-soen'],
 }
 
 export const personalSlugs = [
