@@ -200,6 +200,49 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: 'tfwa-my-odyssey',
+    title: { fr: 'TFWA Cannes 2026 — Stand My Odyssey', en: 'TFWA Cannes 2026 — My Odyssey booth' },
+    category: 'Retail',
+    categoryLabel: { fr: 'Évènement', en: 'Event' },
+    year: '2026',
+    client: 'Hellenist',
+    role: { fr: 'Animation de stand & Brand Marketing', en: 'Booth hosting & Brand Marketing' },
+    cover: '/images/tfwa-my-odyssey-cover.webp',
+    summary: {
+      fr: 'Animation du stand My Odyssey by Hellenist au TFWA Cannes 2026 : présentation des collections de parfums et bougies, et confection du Discovery kit - My Odyssey remis à chaque invité.',
+      en: 'Hosting Hellenist’s My Odyssey booth at TFWA Cannes 2026: presenting the fragrance and candle collections, and preparing the My Odyssey Discovery Kit handed to each guest.',
+    },
+    challenge: {
+      fr: 'Faire vivre l’univers d’une maison de parfumerie de niche face à un public professionnel, et laisser à chaque visiteur une trace concrète de la marque.',
+      en: 'Bringing a niche perfume house to life in front of a trade audience, and leaving every visitor with something tangible from the brand.',
+    },
+    approach: {
+      fr: [
+        'Présentation des parfums, des bougies et des ingrédients des différentes collections à chaque invité.',
+        'Préparation des Discovery Kits, un par invité passé sur le stand.',
+        'Relais de l’évènement sur les réseaux de la marque (post LinkedIn #TFWACannes2026 sur la page @Hellenist).',
+      ],
+      en: [
+        'Presenting the fragrances, candles and ingredients of the various collections to every guest.',
+        'Preparing the Discovery Kits, one for each guest who visited the booth.',
+        'Relaying the event on the brand’s channels (LinkedIn post #TFWACannes2026 on the @Hellenist page).',
+      ],
+    },
+    results: [
+      { value: { fr: 'XX', en: 'XX' }, label: { fr: 'invités accueillis sur le stand', en: 'guests welcomed at the booth' } },
+      { value: { fr: '65', en: '65' }, label: { fr: 'Discovery Kits préparés', en: 'Discovery Kits prepared' } },
+      { value: { fr: 'TFWA 2026', en: 'TFWA 2026' }, label: { fr: 'Cannes, salon du travel retail', en: 'Cannes, travel retail trade show' } },
+    ],
+    tags: {
+      fr: ['Évènementiel', 'Parfumerie de niche', 'Relation client', 'Brand marketing'],
+      en: ['Event', 'Niche perfumery', 'Customer relations', 'Brand marketing'],
+    },
+    gallery: [
+      { src: '/images/tfwa-my-odyssey-1.webp', alt: 'Stand My Odyssey — TFWA Cannes 2026' },
+      { src: '/images/tfwa-my-odyssey-2.webp', alt: 'Kits découverte Hellenist' },
+    ],
+  },
+  {
     slug: 'linkedin-ludi',
     title: { fr: 'Animation & croissance LinkedIn', en: 'LinkedIn management & growth' },
     category: 'Digital',
@@ -366,7 +409,7 @@ export const caseStudy = {
   eyebrow: { fr: 'Étude de cas', en: 'Case Study' } as Bi,
   title: 'Ludi Show',
   subtitle: {
-    fr: ['Ludi SFM est une entreprise niçoise spécialisée dans la fourniture et la maintenance de machines à sous et jeux pour les casinos français, avec un réseau de plus de 200 établissements. L’entreprise s’appuie également sur Modulus, sa société sœur basée à Monaco, qui élargit son rayonnement sur la Principauté ainsi qu’à l’international. C’est dans ce contexte B2B exigeant que s’est déroulé le Ludi Show, l’événement au cœur de cette étude de cas.'],
+    fr: ['Ludi SFM est une entreprise niçoise spécialisée dans la fourniture et la maintenance de machines à sous et jeux pour les casinos français, avec un réseau de plus de 200 établissements. L’entreprise s’appuie également sur Modulus, sa société sœur basée à Monaco, qui élargit son rayonnement sur la Principauté ainsi qu’à l’international. C’est dans ce contexte B2B exigeant que s’est déroulé le Ludi Show, l’évènement au cœur de cette étude de cas.'],
     en: ['Ludi SFM is a Nice-based company specializing in supplying and maintaining slot machines and casino gaming equipment for French casinos, with a network of over 200 establishments. The company also relies on Modulus, its sister company based in Monaco, which extends its reach into the Principality and internationally. It’s within this demanding B2B context that the Ludi Show, the event at the heart of this case study, took place.'],
   },
   context: {
@@ -381,7 +424,7 @@ export const caseStudy = {
   chapters: [
     {
       title: { fr: 'Direction artistique & supports visuels', en: 'Art direction & visual materials' } as Bi,
-      text: { fr: 'Conception de l’identité graphique de l’événement : kakemono d’accueil & déclinaison horizontale pour les écrans avec une palette chaleureuse (jaune/noir, palmiers, Côte d’Azur) qui ancre le Ludi Show dans son territoire et reste cohérente avec son identité de marque.', en: 'Designing the event’s graphic identity: a welcome roll-up banner and a horizontal version for screens, using a warm palette (yellow/black, palm trees, the French Riviera) that grounds the Ludi Show in its territory while staying consistent with the brand identity.' } as Bi,
+      text: { fr: 'Conception de l’identité graphique de l’évènement : kakemono d’accueil & déclinaison horizontale pour les écrans avec une palette chaleureuse (jaune/noir, palmiers, Côte d’Azur) qui ancre le Ludi Show dans son territoire et reste cohérente avec son identité de marque.', en: 'Designing the event’s graphic identity: a welcome roll-up banner and a horizontal version for screens, using a warm palette (yellow/black, palm trees, the French Riviera) that grounds the Ludi Show in its territory while staying consistent with the brand identity.' } as Bi,
     },
     {
       title: { fr: 'Déclinaison de l’identité sur l’ensemble des goodies', en: 'Adapting the identity across all branded merchandise' } as Bi,
@@ -393,7 +436,7 @@ export const caseStudy = {
     },
     {
       title: { fr: 'Mise en place de l’expérience sur place', en: 'Setting up the on-site experience' } as Bi,
-      text: { fr: 'Contribution à l’organisation de l’espace le jour de l’événement, pour que l’expérience vécue sur place soit à la hauteur de l’identité visuelle déployée en amont.', en: 'Contributing to organizing the space on the day of the event, so the on-site experience would live up to the visual identity built beforehand.' } as Bi,
+      text: { fr: 'Contribution à l’organisation de l’espace le jour de l’évènement, pour que l’expérience vécue sur place soit à la hauteur de l’identité visuelle déployée en amont.', en: 'Contributing to organizing the space on the day of the event, so the on-site experience would live up to the visual identity built beforehand.' } as Bi,
     },
   ],
   results: [

@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils'
 import { ProjectCarousel } from '@/components/ui/carousel'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const categoriesFr = ['Tous', 'Digital', 'Contenu', 'Retail', 'Événement'] as const
+const categoriesFr = ['Tous', 'Digital', 'Contenu', 'Retail', 'Évènement'] as const
 const categoriesEn = ['All', 'Digital', 'Content', 'Retail', 'Event'] as const
 
 export function Catalogue({ initialSlug }: { initialSlug?: string } = {}) {
